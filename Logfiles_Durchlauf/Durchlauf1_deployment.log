@@ -1,0 +1,266 @@
+2026-02-01T15:04:32.7243802Z mcce-runner(version:v0.2.10) received task 70 of job provision, be triggered by event: push
+2026-02-01T15:04:32.7251728Z workflow prepared
+2026-02-01T15:04:32.7252931Z evaluating expression 'success()'
+2026-02-01T15:04:32.7254301Z expression 'success()' evaluated to 'true'
+2026-02-01T15:04:32.7264873Z   ☁  git clone 'https://github.com/actions/checkout' # ref=v4
+2026-02-01T15:04:32.7265612Z   cloning https://github.com/actions/checkout to /home/git/.cache/act/actions-checkout@v4
+2026-02-01T15:04:33.4356473Z Unable to pull refs/heads/v4: non-fast-forward update
+2026-02-01T15:04:33.4357515Z Cloned https://github.com/actions/checkout to /home/git/.cache/act/actions-checkout@v4
+2026-02-01T15:04:33.4862229Z Checked out v4
+2026-02-01T15:04:33.4872023Z evaluating expression ''
+2026-02-01T15:04:33.4873748Z expression '' evaluated to 'true'
+2026-02-01T15:04:33.4875467Z ⭐ Run Main actions/checkout@v4
+2026-02-01T15:04:33.4885752Z expression '${{ github.token }}' rewritten to 'format('{0}', github.token)'
+2026-02-01T15:04:33.4886920Z evaluating expression 'format('{0}', github.token)'
+2026-02-01T15:04:33.4887389Z expression 'format('{0}', github.token)' evaluated to '%!t(string=***)'
+2026-02-01T15:04:33.4887795Z expression '${{ github.repository }}' rewritten to 'format('{0}', github.repository)'
+2026-02-01T15:04:33.4887948Z evaluating expression 'format('{0}', github.repository)'
+2026-02-01T15:04:33.4888235Z expression 'format('{0}', github.repository)' evaluated to '%!t(string=***/Teilnehmerlisten)'
+2026-02-01T15:04:33.4888725Z type=remote-action actionDir=/home/git/.cache/act/actions-checkout@v4 actionPath= workdir=/workspace/***/Teilnehmerlisten actionCacheDir=/home/git/.cache/act actionName=actions-checkout@v4 containerActionDir=/home/git/.cache/act/6330b001cee4b150/act/actions/actions-checkout@v4
+2026-02-01T15:04:33.4888930Z /home/git/.cache/act/6330b001cee4b150/act/actions/actions-checkout@v4
+2026-02-01T15:04:33.4889131Z Removing /home/git/.cache/act/actions-checkout@v4/.gitignore before docker cp
+2026-02-01T15:04:33.4890532Z Stripping prefix:/home/git/.cache/act/actions-checkout@v4/ src:/home/git/.cache/act/actions-checkout@v4/
+2026-02-01T15:04:33.6368153Z executing remote job container: [node /home/git/.cache/act/6330b001cee4b150/act/actions/actions-checkout@v4/dist/index.js]
+2026-02-01T15:04:34.0956514Z ::add-matcher::/home/git/.cache/act/6330b001cee4b150/act/actions/actions-checkout@v4/dist/problem-matcher.json
+2026-02-01T15:04:34.0957688Z ::add-matcher::/home/git/.cache/act/6330b001cee4b150/act/actions/actions-checkout@v4/dist/problem-matcher.json
+2026-02-01T15:04:34.0992246Z Syncing repository: ***/Teilnehmerlisten
+2026-02-01T15:04:34.0995459Z ::group::Getting Git version info
+2026-02-01T15:04:34.0998119Z Working directory is '/home/git/.cache/act/6330b001cee4b150/hostexecutor'
+2026-02-01T15:04:34.1166465Z [command]/usr/bin/git version
+2026-02-01T15:04:34.1252059Z git version 2.43.0
+2026-02-01T15:04:34.1346407Z ::endgroup::
+2026-02-01T15:04:34.1395182Z Temporarily overriding HOME='/home/git/.cache/act/6330b001cee4b150/tmp/f818902a-e95a-4dcf-acec-b5627e789e34' before making global git config changes
+2026-02-01T15:04:34.1398304Z Adding repository directory to the temporary git global config as a safe directory
+2026-02-01T15:04:34.1429776Z [command]/usr/bin/git config --global --add safe.directory /home/git/.cache/act/6330b001cee4b150/hostexecutor
+2026-02-01T15:04:34.1543324Z Deleting the contents of '/home/git/.cache/act/6330b001cee4b150/hostexecutor'
+2026-02-01T15:04:34.1564691Z ::group::Initializing the repository
+2026-02-01T15:04:34.1581440Z [command]/usr/bin/git init /home/git/.cache/act/6330b001cee4b150/hostexecutor
+2026-02-01T15:04:34.1671891Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-02-01T15:04:34.1672842Z hint: is subject to change. To configure the initial branch name to use in all
+2026-02-01T15:04:34.1673005Z hint: of your new repositories, which will suppress this warning, call:
+2026-02-01T15:04:34.1673168Z hint: 
+2026-02-01T15:04:34.1673294Z hint: 	git config --global init.defaultBranch <name>
+2026-02-01T15:04:34.1673499Z hint: 
+2026-02-01T15:04:34.1673579Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-02-01T15:04:34.1673712Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-02-01T15:04:34.1673838Z hint: 
+2026-02-01T15:04:34.1673957Z hint: 	git branch -m <name>
+2026-02-01T15:04:34.1685209Z Initialized empty Git repository in /home/git/.cache/act/6330b001cee4b150/hostexecutor/.git/
+2026-02-01T15:04:34.1721773Z [command]/usr/bin/git remote add origin ***/***/Teilnehmerlisten
+2026-02-01T15:04:34.1800509Z ::endgroup::
+2026-02-01T15:04:34.1801647Z ::group::Disabling automatic garbage collection
+2026-02-01T15:04:34.1816463Z [command]/usr/bin/git config --local gc.auto 0
+2026-02-01T15:04:34.1903854Z ::endgroup::
+2026-02-01T15:04:34.1904350Z ::group::Setting up auth
+2026-02-01T15:04:34.1924519Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-02-01T15:04:34.2048026Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-02-01T15:04:34.2597797Z [command]/usr/bin/git config --local --name-only --get-regexp http\.http\:\/\/172\.25\.183\.89\:3000\/\.extraheader
+2026-02-01T15:04:34.2703062Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.http\:\/\/172\.25\.183\.89\:3000\/\.extraheader' && git config --local --unset-all 'http.***/.extraheader' || :"
+2026-02-01T15:04:34.3162103Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-02-01T15:04:34.3248078Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-02-01T15:04:34.3692469Z [command]/usr/bin/git config --local http.***/.extraheader AUTHORIZATION: basic ***
+2026-02-01T15:04:34.3839101Z ::endgroup::
+2026-02-01T15:04:34.3840049Z ::group::Fetching the repository
+2026-02-01T15:04:34.3870247Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +dbb845de08c9dc8ea6fb27777b87f4f6349ef99d:refs/remotes/origin/main
+2026-02-01T15:04:34.4475421Z From ***/***/Teilnehmerlisten
+2026-02-01T15:04:34.4477261Z  * [new ref]         dbb845de08c9dc8ea6fb27777b87f4f6349ef99d -> origin/main
+2026-02-01T15:04:34.4517089Z ::endgroup::
+2026-02-01T15:04:34.4517364Z ::group::Determining the checkout info
+2026-02-01T15:04:34.4529433Z ::endgroup::
+2026-02-01T15:04:34.4541875Z [command]/usr/bin/git sparse-checkout disable
+2026-02-01T15:04:34.4743611Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-02-01T15:04:34.4825268Z ::group::Checking out the ref
+2026-02-01T15:04:34.4863226Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+2026-02-01T15:04:34.5034177Z Switched to a new branch 'main'
+2026-02-01T15:04:34.5038894Z branch 'main' set up to track 'origin/main'.
+2026-02-01T15:04:34.5060041Z ::endgroup::
+2026-02-01T15:04:34.5209149Z [command]/usr/bin/git log -1 --format=%H
+2026-02-01T15:04:34.5264740Z dbb845de08c9dc8ea6fb27777b87f4f6349ef99d
+2026-02-01T15:04:34.5347764Z ::remove-matcher owner=checkout-git::
+2026-02-01T15:04:34.5577249Z ---- ls 2026/ ----
+2026-02-01T15:04:34.5595362Z total 16
+2026-02-01T15:04:34.5596716Z drwxr-xr-x 2 git git 4096 Feb  1 15:04 .
+2026-02-01T15:04:34.5596875Z drwxr-xr-x 7 git git 4096 Feb  1 15:04 ..
+2026-02-01T15:04:34.5597007Z -rw-r--r-- 1 git git  110 Feb  1 15:04 01022026_1_Teilnehmer.csv
+2026-02-01T15:04:34.5597134Z -rw-r--r-- 1 git git  179 Feb  1 15:04 Vorlage_DATUM_Teilnehmer.csv
+2026-02-01T15:04:34.5602628Z ---- files in HEAD commit ----
+2026-02-01T15:04:34.5680594Z WARNING: terminal is not fully functional
+2026-02-01T15:04:34.5682553Z Press RETURN to continue 
+2026-02-01T15:04:34.5683351Z .gitea/workflows/provision.yml[m
+2026-02-01T15:04:34.5683476Z 2026/01022026_1_Teilnehmer.csv[m
+2026-02-01T15:04:34.5683573Z 2026/Vorlage_DATUM_Teilnehmer.csv[m
+2026-02-01T15:04:34.5683666Z out/test[m
+2026-02-01T15:04:34.5683756Z scripts/azure_from_participants_csv.sh[m
+2026-02-01T15:04:34.5683923Z scripts/provision_from_csv.sh[m
+2026-02-01T15:04:34.5700050Z 
+2026-02-01T15:04:34.5802761Z CSV_FILES:
+2026-02-01T15:04:34.5804483Z 2026/01022026_1_Teilnehmer.csv
+2026-02-01T15:04:34.5805575Z ---- CSV content: 2026/01022026_1_Teilnehmer.csv ----
+2026-02-01T15:04:34.5823425Z vorname,nachname,email,module_template
+2026-02-01T15:04:34.5824860Z Tanja,Trebitsch,pixel@oe6tee.at,***
+2026-02-01T15:04:34.5826410Z 
+2026-02-01T15:04:34.5826621Z 
+2026-02-01T15:04:34.5826879Z ---- first lines (show hidden CRLF) ----
+2026-02-01T15:04:34.5851690Z vorname,nachname,email,module_template$
+2026-02-01T15:04:34.5853023Z Tanja,Trebitsch,pixel@oe6tee.at,***$
+2026-02-01T15:04:34.5854029Z $
+2026-02-01T15:04:34.5856146Z Provision with: 2026/01022026_1_Teilnehmer.csv
+2026-02-01T15:04:34.5981993Z Using DATE_TAG=01022026
+2026-02-01T15:04:34.5984056Z Writing credentials to out/01022026_credentials.csv
+2026-02-01T15:04:34.6504566Z Using Pruefer team id=5
+2026-02-01T15:04:34.6739578Z PARSED: vorname='Tanja' nachname='Trebitsch' email='pixel@oe6tee.at' modul_template='***'
+2026-02-01T15:04:34.6937910Z ----
+2026-02-01T15:04:34.6938754Z User=tanjatrebitsch_01022026 Repo=***/01022026_tanjatrebitsch Template=***
+2026-02-01T15:04:35.2628970Z DEBUG generate response: {"id":51,"owner":{"id":3,"login":"***","login_name":"","source_id":0,"full_name":"","email":"","avatar_url":"***/avatars/11d208d8bec834f0a7d98a43189610ab","html_url":"***/***","language":"","is_admin":false,"last_login":"0001-01-01T00:00:00Z","created":"2026-01-09T18:23:32Z","restricted":false,"active":false,"prohibit_login":false,"location":"","website":"","description":"","visibility":"limited","followers_count":0,"following_count":0,"starred_repos_count":0,"username":"***"},"name":"01022026_tanjatrebitsch","full_name":"***/01022026_tanjatrebitsch","description":"Prüfung 01022026 – Tanja Trebitsch","empty":false,"private":true,"fork":false,"template":false,"mirror":false,"size":0,"language":"","languages_url":"***/api/v1/repos/***/01022026_tanjatrebitsch/languages","html_url":"***/***/01022026_tanjatrebitsch","url":"***/api/v1/repos/***/01022026_tanjatrebitsch","link":"","ssh_url":"git@172.25.183.89:***/01022026_tanjatrebitsch.git","clone_url":"***/***/01022026_tanjatrebitsch.git","original_url":"","website":"","stars_count":0,"forks_count":0,"watchers_count":0,"open_issues_count":0,"open_pr_counter":0,"release_counter":0,"default_branch":"","archived":false,"created_at":"2026-02-01T15:04:34Z","updated_at":"2026-02-01T15:04:35Z","archived_at":"1970-01-01T00:00:00Z","permissions":{"admin":true,"push":true,"pull":true},"has_code":false,"has_issues":true,"internal_tracker":{"enable_time_tracker":true,"allow_only_contributors_to_track_time":true,"enable_issue_dependencies":true},"has_wiki":true,"has_pull_requests":true,"has_projects":true,"projects_mode":"all","has_releases":true,"has_packages":true,"has_actions":true,"ignore_whitespace_conflicts":false,"allow_merge_commits":true,"allow_rebase":true,"allow_rebase_explicit":true,"allow_squash_merge":true,"allow_fast_forward_only_merge":true,"allow_rebase_update":true,"allow_manual_merge":false,"autodetect_manual_merge":false,"default_delete_branch_after_merge":false,"default_merge_style":"merge","default_allow_maintainer_edit":false,"avatar_url":"","internal":false,"mirror_interval":"","object_format_name":"sha1","mirror_updated":"0001-01-01T00:00:00Z","topics":[],"licenses":[]}
+2026-02-01T15:04:35.2674530Z Repo created.
+2026-02-01T15:04:35.4967703Z DEBUG collaborator http=204 body=
+2026-02-01T15:04:35.5212301Z DEBUG writing out line for tanjatrebitsch_01022026 (note=created)
+2026-02-01T15:04:35.5217779Z DONE: out/01022026_credentials.csv
+2026-02-01T15:04:35.5398490Z [main 7533b2e] chore: credentials output
+2026-02-01T15:04:35.5399639Z  1 file changed, 2 insertions(+)
+2026-02-01T15:04:35.5399753Z  create mode 100644 out/01022026_credentials.csv
+2026-02-01T15:04:35.5675020Z Enumerating objects: 6, done.
+2026-02-01T15:04:35.5680168Z Counting objects:  16% (1/6)Counting objects:  33% (2/6)Counting objects:  50% (3/6)Counting objects:  66% (4/6)Counting objects:  83% (5/6)Counting objects: 100% (6/6)Counting objects: 100% (6/6), done.
+2026-02-01T15:04:35.5680645Z Delta compression using up to 7 threads
+2026-02-01T15:04:35.5689100Z Compressing objects:  25% (1/4)Compressing objects:  50% (2/4)Compressing objects:  75% (3/4)Compressing objects: 100% (4/4)Compressing objects: 100% (4/4), done.
+2026-02-01T15:04:35.5699410Z Writing objects:  25% (1/4)Writing objects:  50% (2/4)Writing objects:  75% (3/4)Writing objects: 100% (4/4)Writing objects: 100% (4/4), 617 bytes | 617.00 KiB/s, done.
+2026-02-01T15:04:35.5699863Z Total 4 (delta 0), reused 0 (delta 0), pack-reused 0
+2026-02-01T15:04:35.9355984Z remote: . Processing 1 references        
+2026-02-01T15:04:35.9356768Z remote: Processed 1 references in total        
+2026-02-01T15:04:35.9364390Z To ***/***/Teilnehmerlisten.git
+2026-02-01T15:04:35.9365513Z    dbb845d..7533b2e  HEAD -> main
+2026-02-01T15:04:37.4719084Z ==> who am i
+2026-02-01T15:04:38.0553785Z {
+2026-02-01T15:04:38.0555533Z   "environmentName": "AzureCloud",
+2026-02-01T15:04:38.0555698Z   "homeTenantId": "***",
+2026-02-01T15:04:38.0556298Z   "id": "***",
+2026-02-01T15:04:38.0556389Z   "isDefault": true,
+2026-02-01T15:04:38.0556477Z   "managedByTenants": [],
+2026-02-01T15:04:38.0556578Z   "name": "Azure subscription 1",
+2026-02-01T15:04:38.0556649Z   "state": "Enabled",
+2026-02-01T15:04:38.0556718Z   "tenantId": "***",
+2026-02-01T15:04:38.0556794Z   "user": {
+2026-02-01T15:04:38.0556862Z     "name": "***",
+2026-02-01T15:04:38.0556949Z     "type": "servicePrincipal"
+2026-02-01T15:04:38.0557019Z   }
+2026-02-01T15:04:38.0557082Z }
+2026-02-01T15:04:38.2752257Z ==> list subscriptions
+2026-02-01T15:04:38.8534667Z Name                  CloudName    SubscriptionId                        TenantId                              State    IsDefault
+2026-02-01T15:04:38.8536801Z --------------------  -----------  ------------------------------------  ------------------------------------  -------  -----------
+2026-02-01T15:04:38.8537049Z Azure subscription 1  AzureCloud   ***  ***  Enabled  True
+2026-02-01T15:04:39.0249344Z ==> trying az account set to: ***
+2026-02-01T15:04:39.8347607Z Provision Azure from: 2026/01022026_1_Teilnehmer.csv
+2026-02-01T15:04:39.8368331Z CSV_FILE=2026/01022026_1_Teilnehmer.csv
+2026-02-01T15:04:39.8388455Z ==> Checking Azure login...
+2026-02-01T15:04:41.4454744Z ==> Using DATE_TAG=01022026
+2026-02-01T15:04:41.4455442Z ==> CREDENTIALS_CSV=out/01022026_credentials.csv
+2026-02-01T15:04:41.4455573Z ==> LOCATION=westeurope
+2026-02-01T15:04:41.4455675Z ==> WORKDIR=/tmp/mcce_modules
+2026-02-01T15:04:41.4456010Z ==> KEYS_ROOT=/home/git/user_keys
+2026-02-01T15:04:41.4741720Z ----
+2026-02-01T15:04:41.4742427Z Row: Tanja,Trebitsch,pixel@oe6tee.at,***
+2026-02-01T15:04:41.4743099Z Derived: base_user=tanjatrebitsch username_raw=tanjatrebitsch_01022026 user_slug=tanjatrebitsch-01022026 module_repo=ModulA_HTML
+2026-02-01T15:04:41.4839494Z ==> Cloning module repo: ModulA_HTML -> /tmp/mcce_modules/ModulA_HTML
+2026-02-01T15:04:41.4866859Z Cloning into '/tmp/mcce_modules/ModulA_HTML'...
+2026-02-01T15:04:41.5784596Z remote: Enumerating objects: 25, done.        
+2026-02-01T15:04:41.5787790Z remote: Counting objects:   4% (1/25)        remote: Counting objects:   8% (2/25)        remote: Counting objects:  12% (3/25)        remote: Counting objects:  16% (4/25)        remote: Counting objects:  20% (5/25)        remote: Counting objects:  24% (6/25)        remote: Counting objects:  28% (7/25)        remote: Counting objects:  32% (8/25)        remote: Counting objects:  36% (9/25)        remote: Counting objects:  40% (10/25)        remote: Counting objects:  44% (11/25)        remote: Counting objects:  48% (12/25)        remote: Counting objects:  52% (13/25)        remote: Counting objects:  56% (14/25)        remote: Counting objects:  60% (15/25)        remote: Counting objects:  64% (16/25)        remote: Counting objects:  68% (17/25)        remote: Counting objects:  72% (18/25)        remote: Counting objects:  76% (19/25)        remote: Counting objects:  80% (20/25)        remote: Counting objects:  84% (21/25)        remote: Counting objects:  88% (22/25)        remote: Counting objects:  92% (23/25)        remote: Counting objects:  96% (24/25)        remote: Counting objects: 100% (25/25)        remote: Counting objects: 100% (25/25), done.        
+2026-02-01T15:04:41.5788524Z remote: Compressing objects:   5% (1/20)        remote: Compressing objects:  10% (2/20)        remote: Compressing objects:  15% (3/20)        remote: Compressing objects:  20% (4/20)        remote: Compressing objects:  25% (5/20)        remote: Compressing objects:  30% (6/20)        remote: Compressing objects:  35% (7/20)        remote: Compressing objects:  40% (8/20)        remote: Compressing objects:  45% (9/20)        remote: Compressing objects:  50% (10/20)        remote: Compressing objects:  55% (11/20)        remote: Compressing objects:  60% (12/20)        remote: Compressing objects:  65% (13/20)        remote: Compressing objects:  70% (14/20)        remote: Compressing objects:  75% (15/20)        remote: Compressing objects:  80% (16/20)        remote: Compressing objects:  85% (17/20)        remote: Compressing objects:  90% (18/20)        remote: Compressing objects:  95% (19/20)        remote: Compressing objects: 100% (20/20)        remote: Compressing objects: 100% (20/20), done.        
+2026-02-01T15:04:41.5821959Z Receiving objects:   4% (1/25)Receiving objects:   8% (2/25)Receiving objects:  12% (3/25)Receiving objects:  16% (4/25)Receiving objects:  20% (5/25)Receiving objects:  24% (6/25)Receiving objects:  28% (7/25)Receiving objects:  32% (8/25)Receiving objects:  36% (9/25)Receiving objects:  40% (10/25)remote: Total 25 (delta 0), reused 0 (delta 0), pack-reused 0        
+2026-02-01T15:04:41.5839739Z Receiving objects:  44% (11/25)Receiving objects:  48% (12/25)Receiving objects:  52% (13/25)Receiving objects:  56% (14/25)Receiving objects:  60% (15/25)Receiving objects:  64% (16/25)Receiving objects:  68% (17/25)Receiving objects:  72% (18/25)Receiving objects:  76% (19/25)Receiving objects:  80% (20/25)Receiving objects:  84% (21/25)Receiving objects:  88% (22/25)Receiving objects:  92% (23/25)Receiving objects:  96% (24/25)Receiving objects: 100% (25/25)Receiving objects: 100% (25/25), 25.77 KiB | 8.59 MiB/s, done.
+2026-02-01T15:04:41.6039998Z DEBUG: mod_dir='/tmp/mcce_modules/ModulA_HTML'
+2026-02-01T15:04:43.2425539Z ==> Provisioning TestVM (not found yet)
+2026-02-01T15:04:44.3891057Z ==> Active account:
+2026-02-01T15:04:44.8072232Z {
+2026-02-01T15:04:44.8073078Z   "id": "***",
+2026-02-01T15:04:44.8073200Z   "name": "Azure subscription 1",
+2026-02-01T15:04:44.8073300Z   "state": "Enabled",
+2026-02-01T15:04:44.8073364Z   "tenantId": "***"
+2026-02-01T15:04:44.8073435Z }
+2026-02-01T15:04:44.9313805Z ==> Ensuring resource group: rg-mcce-poc (westeurope)
+2026-02-01T15:04:47.8525321Z ==> SSH key exists: /home/git/user_keys/01022026/testvm
+2026-02-01T15:04:48.2501365Z ==> SSH allowed from: 46.124.163.6/32
+2026-02-01T15:04:48.2502196Z ==> Creating test VM: mcce-testvm
+2026-02-01T15:04:48.9351065Z WARNING: The default value of '--size' will be changed to 'Standard_D2s_v5' from 'Standard_DS1_v2' in a future release.
+2026-02-01T15:04:49.4812217Z Selecting "uksouth" may reduce your costs. The region you've selected may cost more for the same services. You can disable this message in the future with the command "az config set core.display_region_identified=false". Learn more at https://go.microsoft.com/fwlink/?linkid=222571 
+2026-02-01T15:04:49.4813449Z 
+2026-02-01T15:05:33.0005272Z [K - Starting ..[K \ InProgress ..[K | Running ..[K / Running ..[K - Running ..[K \ Running ..[K | Running ..[K / Running ..[K - Running ..[K \ Running ..[K | Running ..[K / Running ..[K - Running ..[K \ Running ..[K | Running ..[K / Running ..[K - Running ..[K \ Running ..[K | Running ..[K / Running ..[K - Running ..[K \ Running ..[K | Running ..[K / Running ..[K - Running ..[K \ Running ..[K | Running ..[K / Running ..[K - Running ..[K \ Running ..[K | Running ..[K / Running ..[K - Running ..[K \ Running ..[K | Running ..[K / Running ..[K - Running ..[K \ Running ..[K | Running ..[K / Running ..[K - Running ..[K \ Running ..[K | Running ..[K / Running ..[K - Running ..[K \ Running ..[K | Running ..[K / Running ..[K - Running ..[K \ Running ..[K | Running ..[K / Running ..[K - Running ..[K \ Running ..[K | Running ..[K / Running ..[K - Running ..[K \ Running ..[K | Running ..[K / Running ..[K - Running ..[K \ Running ..[K | Succeeded ..[K / Finished ..[K==> Using NSG: mcce-testvmNSG
+2026-02-01T15:05:39.3388316Z [K - Starting ..[K \ Running ..[K | Finished ..[K==> Public IP: 20.101.53.83
+2026-02-01T15:05:39.3423704Z ==> Installing Docker & basic deps via Azure RunCommand...
+2026-02-01T15:06:12.1450654Z [K - Starting ..[K \ Running ..[K | Running ..[K / Running ..[K - Running ..[K \ Running ..[K | Running ..[K / Running ..[K - Running ..[K \ Running ..[K | Running ..[K / Running ..[K - Running ..[K \ Running ..[K | Running ..[K / Running ..[K - Running ..[K \ Running ..[K | Running ..[K / Running ..[K - Running ..[K \ Running ..[K | Running ..[K / Running ..[K - Running ..[K \ Running ..[K | Running ..[K / Running ..[K - Running ..[K \ Running ..[K | Running ..[K / Running ..[K - Running ..[K \ Running ..[K | Running ..[K / Running ..[K - Running ..[K \ Running ..[K | Running ..[K / Running ..[K - Running ..[K \ Running ..[K | Running ..[K / Running ..[K - Running ..[K \ Running ..[K | Running ..[K / Running ..[K - Running ..[K \ Running ..[K | Running ..[K / Running ..[K - Running ..[K \ Running ..[K | Running ..[K / Running ..[K - Running ..[K \ Running ..[K | Running ..[K / Running ..[K - Running ..[K \ Running ..[K | Running ..[K / Running ..[K - Finished ..[K==> Pre-pulling Cypress Docker image: cypress/included:13.6.4
+2026-02-01T15:06:45.2110694Z [K - Starting ..[K \ Running ..[K | Running ..[K / Running ..[K - Running ..[K \ Running ..[K | Running ..[K / Running ..[K - Running ..[K \ Running ..[K | Running ..[K / Running ..[K - Running ..[K \ Running ..[K | Running ..[K / Running ..[K - Running ..[K \ Running ..[K | Running ..[K / Running ..[K - Running ..[K \ Running ..[K | Running ..[K / Running ..[K - Running ..[K \ Running ..[K | Running ..[K / Running ..[K - Running ..[K \ Running ..[K | Running ..[K / Running ..[K - Running ..[K \ Running ..[K | Running ..[K / Running ..[K - Running ..[K \ Running ..[K | Running ..[K / Running ..[K - Running ..[K \ Running ..[K | Running ..[K / Running ..[K - Running ..[K \ Running ..[K | Running ..[K / Running ..[K - Running ..[K \ Running ..[K | Running ..[K / Running ..[K - Running ..[K \ Running ..[K | Running ..[K / Running ..[K - Running ..[K \ Running ..[K | Running ..[K / Running ..[K - Running ..[K \ Running ..[K | Running ..[K / Running ..[K - Finished ..[K
+2026-02-01T15:06:45.2111399Z ✅ TestVM deployed & configured.
+2026-02-01T15:06:45.2112041Z RG:        rg-mcce-poc
+2026-02-01T15:06:45.2112216Z VM:        mcce-testvm
+2026-02-01T15:06:45.2112739Z Public IP: 20.101.53.83
+2026-02-01T15:06:45.2112909Z Inventory: out/testvm/inventory.ini
+2026-02-01T15:06:45.2113057Z Info:      out/testvm/howto_run_cypress.txt
+2026-02-01T15:06:45.2113280Z SSH key:   /home/git/user_keys/01022026/testvm
+2026-02-01T15:06:45.2117149Z ==> Provisioning participant VM for user=tanjatrebitsch_01022026 (slug=tanjatrebitsch-01022026)
+2026-02-01T15:06:45.2138552Z DEBUG(create.sh): PWD=/tmp/mcce_modules/ModulA_HTML
+2026-02-01T15:06:45.2171291Z DEBUG(create.sh): DATE_TAG=01022026 USER_NAME=tanjatrebitsch_01022026 USER_SLUG=tanjatrebitsch-01022026
+2026-02-01T15:06:47.2966151Z ==> Using subscription: ***
+2026-02-01T15:06:47.2967365Z ==> User: tanjatrebitsch_01022026 (slug: tanjatrebitsch-01022026)
+2026-02-01T15:06:47.2967580Z ==> Resource Group: rg-mcce-poc
+2026-02-01T15:06:47.2967738Z ==> VM Name: mcce-poc-tanjatrebitsch-01022026
+2026-02-01T15:06:47.2967876Z ==> DATE_TAG: 01022026
+2026-02-01T15:06:47.2967975Z ==> SSH key path: /home/git/user_keys/01022026/tanjatrebitsch-01022026
+2026-02-01T15:06:50.8539568Z ==> SSH key exists: /home/git/user_keys/01022026/tanjatrebitsch-01022026
+2026-02-01T15:06:51.0568736Z ==> SSH allowed from: 46.124.163.6/32
+2026-02-01T15:06:51.0569799Z ==> Creating VM...
+2026-02-01T15:06:51.7484764Z WARNING: The default value of '--size' will be changed to 'Standard_D2s_v5' from 'Standard_DS1_v2' in a future release.
+2026-02-01T15:06:52.4183236Z Selecting "uksouth" may reduce your costs. The region you've selected may cost more for the same services. You can disable this message in the future with the command "az config set core.display_region_identified=false". Learn more at https://go.microsoft.com/fwlink/?linkid=222571 
+2026-02-01T15:06:52.4184617Z 
+2026-02-01T15:07:45.9274298Z [K - Starting ..[K \ Running ..[K | Running ..[K / Running ..[K - Running ..[K \ Running ..[K | Running ..[K / Running ..[K - Running ..[K \ Running ..[K | Running ..[K / Running ..[K - Running ..[K \ Running ..[K | Running ..[K / Running ..[K - Running ..[K \ Running ..[K | Running ..[K / Running ..[K - Running ..[K \ Running ..[K | Running ..[K / Running ..[K - Running ..[K \ Running ..[K | Running ..[K / Running ..[K - Running ..[K \ Running ..[K | Running ..[K / Running ..[K - Running ..[K \ Running ..[K | Running ..[K / Running ..[K - Running ..[K \ Running ..[K | Running ..[K / Running ..[K - Running ..[K \ Running ..[K | Running ..[K / Running ..[K - Running ..[K \ Running ..[K | Running ..[K / Running ..[K - Running ..[K \ Running ..[K | Running ..[K / Running ..[K - Running ..[K \ Running ..[K | Running ..[K / Running ..[K - Running ..[K \ Running ..[K | Running ..[K / Running ..[K - Running ..[K \ Running ..[K | Finished ..[K[K - Starting ..[K \ Running ..[K | Running ..[K / Finished ..[K[K - Starting ..[K \ Running ..[K | Running ..[K / Finished ..[K[K - Starting ..[K \ Running ..[K | Running ..[K / Finished ..[K==> Public IP: 20.229.86.3
+2026-02-01T15:07:45.9359778Z ==> Also wrote inventory to: /home/git/mcce_out/01022026/tanjatrebitsch-01022026/inventory.ini
+2026-02-01T15:07:45.9361156Z 
+2026-02-01T15:07:45.9361521Z ✅ Provisioned user VM.
+2026-02-01T15:07:45.9361614Z User:      tanjatrebitsch_01022026
+2026-02-01T15:07:45.9361689Z VM:        mcce-poc-tanjatrebitsch-01022026
+2026-02-01T15:07:45.9361744Z RG:        rg-mcce-poc
+2026-02-01T15:07:45.9362002Z Inventory: out/tanjatrebitsch-01022026/inventory.ini
+2026-02-01T15:07:45.9362718Z SSH key:   /home/git/user_keys/01022026/tanjatrebitsch-01022026
+2026-02-01T15:07:45.9363800Z 
+2026-02-01T15:07:45.9369229Z ==> Running Ansible base.yml for tanjatrebitsch-01022026
+2026-02-01T15:07:46.5139145Z 
+2026-02-01T15:07:46.5140230Z PLAY [Base system setup] *******************************************************
+2026-02-01T15:07:46.5221707Z 
+2026-02-01T15:07:46.5222371Z TASK [Gathering Facts] *********************************************************
+2026-02-01T15:07:51.2366544Z ok: [20.229.86.3]
+2026-02-01T15:07:51.2502507Z 
+2026-02-01T15:07:51.2503731Z TASK [Update apt cache] ********************************************************
+2026-02-01T15:08:00.3858723Z changed: [20.229.86.3]
+2026-02-01T15:08:00.3895535Z 
+2026-02-01T15:08:00.3896143Z TASK [Install nginx] ***********************************************************
+2026-02-01T15:08:09.1661988Z changed: [20.229.86.3]
+2026-02-01T15:08:09.1709509Z 
+2026-02-01T15:08:09.1710430Z TASK [Ensure nginx is enabled and running] *************************************
+2026-02-01T15:08:11.0212513Z ok: [20.229.86.3]
+2026-02-01T15:08:11.0343463Z 
+2026-02-01T15:08:11.0344436Z PLAY RECAP *********************************************************************
+2026-02-01T15:08:11.0344833Z 20.229.86.3                : ok=4    changed=2    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2026-02-01T15:08:11.0345580Z 
+2026-02-01T15:08:11.1673042Z ==> Bootstrapping participant repo on VM: tanjatrebitsch_01022026 @ 20.229.86.3
+2026-02-01T15:08:11.9474385Z OK(bootstrap): repo ready in /home/azureuser/workspace/01022026_tanjatrebitsch
+2026-02-01T15:08:11.9490974Z ✅ Azure provisioning from participants CSV finished.
+2026-02-01T15:08:11.9499341Z evaluating expression 'always()'
+2026-02-01T15:08:11.9499800Z expression 'always()' evaluated to 'true'
+2026-02-01T15:08:11.9499875Z ⭐ Run Post actions/checkout@v4
+2026-02-01T15:08:11.9500424Z run post step for 'actions/checkout@v4'
+2026-02-01T15:08:11.9501111Z executing remote job container: [node /home/git/.cache/act/6330b001cee4b150/act/actions/actions-checkout@v4/dist/index.js]
+2026-02-01T15:08:12.1651560Z [command]/usr/bin/git version
+2026-02-01T15:08:12.1751157Z git version 2.43.0
+2026-02-01T15:08:12.1785985Z ***
+2026-02-01T15:08:12.1827715Z Temporarily overriding HOME='/home/git/.cache/act/6330b001cee4b150/tmp/264b54be-9d80-4392-a8d8-1ababe9d8417' before making global git config changes
+2026-02-01T15:08:12.1829120Z Adding repository directory to the temporary git global config as a safe directory
+2026-02-01T15:08:12.1838679Z [command]/usr/bin/git config --global --add safe.directory /home/git/.cache/act/6330b001cee4b150/hostexecutor
+2026-02-01T15:08:12.1896349Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-02-01T15:08:12.1942666Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-02-01T15:08:12.2176980Z [command]/usr/bin/git config --local --name-only --get-regexp http\.http\:\/\/172\.25\.183\.89\:3000\/\.extraheader
+2026-02-01T15:08:12.2205197Z http.***/.extraheader
+2026-02-01T15:08:12.2220507Z [command]/usr/bin/git config --local --unset-all http.***/.extraheader
+2026-02-01T15:08:12.2261911Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.http\:\/\/172\.25\.183\.89\:3000\/\.extraheader' && git config --local --unset-all 'http.***/.extraheader' || :"
+2026-02-01T15:08:12.2515207Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-02-01T15:08:12.2568510Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-02-01T15:08:12.2919831Z   ✅  Success - Post actions/checkout@v4
+2026-02-01T15:08:12.2922138Z Cleaning up container for job provision
+2026-02-01T15:08:12.3170215Z 🏁  Job succeeded

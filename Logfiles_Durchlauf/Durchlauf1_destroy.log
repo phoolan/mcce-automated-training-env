@@ -1,0 +1,1013 @@
+2026-02-01T15:22:41.5383512Z mcce-runner(version:v0.2.10) received task 72 of job destroy, be triggered by event: workflow_dispatch
+2026-02-01T15:22:41.5386122Z workflow prepared
+2026-02-01T15:22:41.5386864Z evaluating expression 'success()'
+2026-02-01T15:22:41.5387391Z expression 'success()' evaluated to 'true'
+2026-02-01T15:22:41.5389588Z   ☁  git clone 'https://github.com/actions/checkout' # ref=v4
+2026-02-01T15:22:41.5389821Z   cloning https://github.com/actions/checkout to /home/git/.cache/act/actions-checkout@v4
+2026-02-01T15:22:42.1931314Z Unable to pull refs/heads/v4: non-fast-forward update
+2026-02-01T15:22:42.1931819Z Cloned https://github.com/actions/checkout to /home/git/.cache/act/actions-checkout@v4
+2026-02-01T15:22:42.2196959Z Checked out v4
+2026-02-01T15:22:42.2200490Z evaluating expression ''
+2026-02-01T15:22:42.2200985Z expression '' evaluated to 'true'
+2026-02-01T15:22:42.2201078Z ⭐ Run Main Checkout
+2026-02-01T15:22:42.2202594Z expression '${{ github.repository }}' rewritten to 'format('{0}', github.repository)'
+2026-02-01T15:22:42.2202787Z evaluating expression 'format('{0}', github.repository)'
+2026-02-01T15:22:42.2203836Z expression 'format('{0}', github.repository)' evaluated to '%!t(string=MCCE_Module/ModulA_HTML)'
+2026-02-01T15:22:42.2204165Z expression '${{ github.token }}' rewritten to 'format('{0}', github.token)'
+2026-02-01T15:22:42.2204220Z evaluating expression 'format('{0}', github.token)'
+2026-02-01T15:22:42.2204370Z expression 'format('{0}', github.token)' evaluated to '%!t(string=***)'
+2026-02-01T15:22:42.2204540Z type=remote-action actionDir=/home/git/.cache/act/actions-checkout@v4 actionPath= workdir=/workspace/MCCE_Module/ModulA_HTML actionCacheDir=/home/git/.cache/act actionName=actions-checkout@v4 containerActionDir=/home/git/.cache/act/a1d7e7c616fa69e3/act/actions/actions-checkout@v4
+2026-02-01T15:22:42.2204611Z /home/git/.cache/act/a1d7e7c616fa69e3/act/actions/actions-checkout@v4
+2026-02-01T15:22:42.2204687Z Removing /home/git/.cache/act/actions-checkout@v4/.gitignore before docker cp
+2026-02-01T15:22:42.2204978Z Stripping prefix:/home/git/.cache/act/actions-checkout@v4/ src:/home/git/.cache/act/actions-checkout@v4/
+2026-02-01T15:22:42.2639974Z executing remote job container: [node /home/git/.cache/act/a1d7e7c616fa69e3/act/actions/actions-checkout@v4/dist/index.js]
+2026-02-01T15:22:42.4450779Z ::add-matcher::/home/git/.cache/act/a1d7e7c616fa69e3/act/actions/actions-checkout@v4/dist/problem-matcher.json
+2026-02-01T15:22:42.4452218Z ::add-matcher::/home/git/.cache/act/a1d7e7c616fa69e3/act/actions/actions-checkout@v4/dist/problem-matcher.json
+2026-02-01T15:22:42.4474866Z Syncing repository: MCCE_Module/ModulA_HTML
+2026-02-01T15:22:42.4475447Z ::group::Getting Git version info
+2026-02-01T15:22:42.4475505Z Working directory is '/home/git/.cache/act/a1d7e7c616fa69e3/hostexecutor'
+2026-02-01T15:22:42.4546783Z [command]/usr/bin/git version
+2026-02-01T15:22:42.4602449Z git version 2.43.0
+2026-02-01T15:22:42.4628079Z ::endgroup::
+2026-02-01T15:22:42.4643905Z Temporarily overriding HOME='/home/git/.cache/act/a1d7e7c616fa69e3/tmp/652b5164-f545-4066-bcf3-ede41fad97d0' before making global git config changes
+2026-02-01T15:22:42.4645271Z Adding repository directory to the temporary git global config as a safe directory
+2026-02-01T15:22:42.4652382Z [command]/usr/bin/git config --global --add safe.directory /home/git/.cache/act/a1d7e7c616fa69e3/hostexecutor
+2026-02-01T15:22:42.4703798Z Deleting the contents of '/home/git/.cache/act/a1d7e7c616fa69e3/hostexecutor'
+2026-02-01T15:22:42.4711073Z ::group::Initializing the repository
+2026-02-01T15:22:42.4714881Z [command]/usr/bin/git init /home/git/.cache/act/a1d7e7c616fa69e3/hostexecutor
+2026-02-01T15:22:42.4747629Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-02-01T15:22:42.4748093Z hint: is subject to change. To configure the initial branch name to use in all
+2026-02-01T15:22:42.4748206Z hint: of your new repositories, which will suppress this warning, call:
+2026-02-01T15:22:42.4748292Z hint: 
+2026-02-01T15:22:42.4748357Z hint: 	git config --global init.defaultBranch <name>
+2026-02-01T15:22:42.4748447Z hint: 
+2026-02-01T15:22:42.4748516Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-02-01T15:22:42.4748586Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-02-01T15:22:42.4748648Z hint: 
+2026-02-01T15:22:42.4748703Z hint: 	git branch -m <name>
+2026-02-01T15:22:42.4765552Z Initialized empty Git repository in /home/git/.cache/act/a1d7e7c616fa69e3/hostexecutor/.git/
+2026-02-01T15:22:42.4778640Z [command]/usr/bin/git remote add origin http://172.25.183.89:3000/MCCE_Module/ModulA_HTML
+2026-02-01T15:22:42.4814075Z ::endgroup::
+2026-02-01T15:22:42.4814320Z ::group::Disabling automatic garbage collection
+2026-02-01T15:22:42.4824065Z [command]/usr/bin/git config --local gc.auto 0
+2026-02-01T15:22:42.4860911Z ::endgroup::
+2026-02-01T15:22:42.4861082Z ::group::Setting up auth
+2026-02-01T15:22:42.4868837Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-02-01T15:22:42.4903384Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-02-01T15:22:42.5093565Z [command]/usr/bin/git config --local --name-only --get-regexp http\.http\:\/\/172\.25\.183\.89\:3000\/\.extraheader
+2026-02-01T15:22:42.5131638Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.http\:\/\/172\.25\.183\.89\:3000\/\.extraheader' && git config --local --unset-all 'http.http://172.25.183.89:3000/.extraheader' || :"
+2026-02-01T15:22:42.5335566Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-02-01T15:22:42.5369585Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-02-01T15:22:42.5617935Z [command]/usr/bin/git config --local http.http://172.25.183.89:3000/.extraheader AUTHORIZATION: basic ***
+2026-02-01T15:22:42.5667340Z ::endgroup::
+2026-02-01T15:22:42.5667683Z ::group::Fetching the repository
+2026-02-01T15:22:42.5677025Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +a83a5bff36c616b7926bad480c6e9cac563a41a9:refs/remotes/origin/main
+2026-02-01T15:22:42.6192916Z From http://172.25.183.89:3000/MCCE_Module/ModulA_HTML
+2026-02-01T15:22:42.6193895Z  * [new ref]         a83a5bff36c616b7926bad480c6e9cac563a41a9 -> origin/main
+2026-02-01T15:22:42.6206963Z ::endgroup::
+2026-02-01T15:22:42.6207240Z ::group::Determining the checkout info
+2026-02-01T15:22:42.6210259Z ::endgroup::
+2026-02-01T15:22:42.6215407Z [command]/usr/bin/git sparse-checkout disable
+2026-02-01T15:22:42.6274492Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-02-01T15:22:42.6313218Z ::group::Checking out the ref
+2026-02-01T15:22:42.6326862Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+2026-02-01T15:22:42.6408380Z Switched to a new branch 'main'
+2026-02-01T15:22:42.6413092Z branch 'main' set up to track 'origin/main'.
+2026-02-01T15:22:42.6419315Z ::endgroup::
+2026-02-01T15:22:42.6460297Z [command]/usr/bin/git log -1 --format=%H
+2026-02-01T15:22:42.6494339Z a83a5bff36c616b7926bad480c6e9cac563a41a9
+2026-02-01T15:22:42.6510422Z ::remove-matcher owner=checkout-git::
+2026-02-01T15:22:42.6619020Z + pwd
+2026-02-01T15:22:42.6619591Z /home/git/.cache/act/a1d7e7c616fa69e3/hostexecutor
+2026-02-01T15:22:42.6619740Z + ls -la
+2026-02-01T15:22:42.6633452Z total 68
+2026-02-01T15:22:42.6635114Z drwxr-xr-x 7 git git  4096 Feb  1 15:22 .
+2026-02-01T15:22:42.6635605Z drwxr-xr-x 5 git git  4096 Feb  1 15:22 ..
+2026-02-01T15:22:42.6635748Z drwxr-xr-x 2 git git  4096 Feb  1 15:22 Angabe
+2026-02-01T15:22:42.6636793Z drwxr-xr-x 2 git git  4096 Feb  1 15:22 Bewertung
+2026-02-01T15:22:42.6636973Z drwxr-xr-x 8 git git  4096 Feb  1 15:22 .git
+2026-02-01T15:22:42.6637055Z drwxr-xr-x 3 git git  4096 Feb  1 15:22 .gitea
+2026-02-01T15:22:42.6637127Z drwxr-xr-x 4 git git  4096 Feb  1 15:22 infra
+2026-02-01T15:22:42.6637209Z -rw-r--r-- 1 git git 34602 Feb  1 15:22 LICENSE
+2026-02-01T15:22:42.6637289Z -rw-r--r-- 1 git git    15 Feb  1 15:22 README.md
+2026-02-01T15:22:42.6639973Z + ls -la infra/azure
+2026-02-01T15:22:42.6651471Z total 52
+2026-02-01T15:22:42.6651935Z drwxr-xr-x 2 git git 4096 Feb  1 15:22 .
+2026-02-01T15:22:42.6652066Z drwxr-xr-x 4 git git 4096 Feb  1 15:22 ..
+2026-02-01T15:22:42.6652153Z -rw-r--r-- 1 git git 1084 Feb  1 15:22 bootstrap_user_repo.sh
+2026-02-01T15:22:42.6652230Z -rw-r--r-- 1 git git 8506 Feb  1 15:22 create.sh
+2026-02-01T15:22:42.6652309Z -rw-r--r-- 1 git git 8642 Feb  1 15:22 create_testvm.sh
+2026-02-01T15:22:42.6652372Z -rw-r--r-- 1 git git 7009 Feb  1 15:22 destroy_all.sh
+2026-02-01T15:22:42.6652433Z -rw-r--r-- 1 git git 1966 Feb  1 15:22 destroy.sh
+2026-02-01T15:22:42.6652496Z -rw-r--r-- 1 git git 1275 Feb  1 15:22 destroy_testvm.sh
+2026-02-01T15:22:42.6653650Z + command -v az
+2026-02-01T15:22:42.6653843Z /usr/bin/az
+2026-02-01T15:22:42.6655251Z + az version
+2026-02-01T15:22:42.8149023Z {
+2026-02-01T15:22:42.8149806Z   "azure-cli": "2.82.0",
+2026-02-01T15:22:42.8149892Z   "azure-cli-core": "2.82.0",
+2026-02-01T15:22:42.8150094Z   "azure-cli-telemetry": "1.1.0",
+2026-02-01T15:22:42.8150145Z   "extensions": {}
+2026-02-01T15:22:42.8150184Z }
+2026-02-01T15:22:42.8746575Z + az login --service-principal -u *** -p *** --tenant ***
+2026-02-01T15:22:43.4453331Z [
+2026-02-01T15:22:43.4454096Z   {
+2026-02-01T15:22:43.4454249Z     "cloudName": "AzureCloud",
+2026-02-01T15:22:43.4454344Z     "homeTenantId": "***",
+2026-02-01T15:22:43.4454439Z     "id": "***",
+2026-02-01T15:22:43.4454513Z     "isDefault": true,
+2026-02-01T15:22:43.4454582Z     "managedByTenants": [],
+2026-02-01T15:22:43.4454678Z     "name": "Azure subscription 1",
+2026-02-01T15:22:43.4454739Z     "state": "Enabled",
+2026-02-01T15:22:43.4454795Z     "tenantId": "***",
+2026-02-01T15:22:43.4454851Z     "user": {
+2026-02-01T15:22:43.4454925Z       "name": "***",
+2026-02-01T15:22:43.4454996Z       "type": "servicePrincipal"
+2026-02-01T15:22:43.4455070Z     }
+2026-02-01T15:22:43.4455164Z   }
+2026-02-01T15:22:43.4455216Z ]
+2026-02-01T15:22:43.5435358Z + az account show -o table
+2026-02-01T15:22:43.8197886Z EnvironmentName    HomeTenantId                          IsDefault    Name                  State    TenantId
+2026-02-01T15:22:43.8198551Z -----------------  ------------------------------------  -----------  --------------------  -------  ------------------------------------
+2026-02-01T15:22:43.8198622Z AzureCloud         ***  True         Azure subscription 1  Enabled  ***
+2026-02-01T15:22:43.9180469Z + [[ -n '' ]]
+2026-02-01T15:22:43.9181234Z + export SUBSCRIPTION_ID=***
+2026-02-01T15:22:43.9181329Z + SUBSCRIPTION_ID=***
+2026-02-01T15:22:43.9181426Z + echo 'Using SUBSCRIPTION_ID=***'
+2026-02-01T15:22:43.9181522Z Using SUBSCRIPTION_ID=***
+2026-02-01T15:22:43.9181595Z + [[ -z *** ]]
+2026-02-01T15:22:43.9181681Z + az account set --subscription ***
+2026-02-01T15:22:44.3151575Z + az account show -o table
+2026-02-01T15:22:44.7382881Z EnvironmentName    HomeTenantId                          IsDefault    Name                  State    TenantId
+2026-02-01T15:22:44.7384007Z -----------------  ------------------------------------  -----------  --------------------  -------  ------------------------------------
+2026-02-01T15:22:44.7384204Z AzureCloud         ***  True         Azure subscription 1  Enabled  ***
+2026-02-01T15:22:44.8548520Z + chmod +x ./infra/azure/destroy_all.sh
+2026-02-01T15:22:44.8562783Z + bash -x ./infra/azure/destroy_all.sh
+2026-02-01T15:22:44.8583021Z + set -euo pipefail
+2026-02-01T15:22:44.8583921Z + DRY_RUN=0
+2026-02-01T15:22:44.8584131Z + FORCE=1
+2026-02-01T15:22:44.8584230Z + ALL_SUBSCRIPTIONS=0
+2026-02-01T15:22:44.8584316Z + SUBSCRIPTION_ID=***
+2026-02-01T15:22:44.8584862Z + DISABLE_NETWORK_WATCHER=1
+2026-02-01T15:22:44.8586913Z + EXCLUDE_RG_REGEX_CSV=
+2026-02-01T15:22:44.8587183Z + need_cmd az
+2026-02-01T15:22:44.8587671Z + command -v az
+2026-02-01T15:22:44.8587924Z + need_cmd sed
+2026-02-01T15:22:44.8588025Z + command -v sed
+2026-02-01T15:22:44.8590213Z + need_cmd grep
+2026-02-01T15:22:44.8590940Z + command -v grep
+2026-02-01T15:22:44.8591106Z + need_cmd sort
+2026-02-01T15:22:44.8591208Z + command -v sort
+2026-02-01T15:22:44.8591294Z + az account show
+2026-02-01T15:22:45.4007811Z + confirm_or_die
+2026-02-01T15:22:45.4008872Z + [[ 0 == \1 ]]
+2026-02-01T15:22:45.4009762Z + [[ 1 != \1 ]]
+2026-02-01T15:22:45.4009927Z + echo
+2026-02-01T15:22:45.4010020Z 
+2026-02-01T15:22:45.4010103Z + echo '!!! EXTREMELY DESTRUCTIVE OPERATION !!!'
+2026-02-01T15:22:45.4010229Z !!! EXTREMELY DESTRUCTIVE OPERATION !!!
+2026-02-01T15:22:45.4010400Z + echo 'This will delete Resource Groups (and therefore resources) in the selected subscription(s).'
+2026-02-01T15:22:45.4010581Z This will delete Resource Groups (and therefore resources) in the selected subscription(s).
+2026-02-01T15:22:45.4013356Z ++ build_exclude_regex
+2026-02-01T15:22:45.4013995Z ++ [[ -z '' ]]
+2026-02-01T15:22:45.4016384Z ++ echo ''
+2026-02-01T15:22:45.4020414Z + exclude_regex=
+2026-02-01T15:22:45.4020980Z + [[ -n '' ]]
+2026-02-01T15:22:45.4021161Z + echo '==> No exclusions: ALL resource groups will be targeted (including system RGs).'
+2026-02-01T15:22:45.4021280Z ==> No exclusions: ALL resource groups will be targeted (including system RGs).
+2026-02-01T15:22:45.4027943Z ++ get_subscriptions
+2026-02-01T15:22:45.4028695Z ++ [[ 0 == \1 ]]
+2026-02-01T15:22:45.4029233Z ++ [[ -z *** ]]
+2026-02-01T15:22:45.4029411Z ++ echo ***
+2026-02-01T15:22:45.4032961Z + subs=***
+2026-02-01T15:22:45.4034424Z + [[ -z *** ]]
+2026-02-01T15:22:45.4036033Z + IFS=
+2026-02-01T15:22:45.4037155Z + read -r sub
+2026-02-01T15:22:45.4037569Z + [[ -z *** ]]
+2026-02-01T15:22:45.4037721Z + echo
+2026-02-01T15:22:45.4037809Z 
+2026-02-01T15:22:45.4038010Z + echo ============================================================
+2026-02-01T15:22:45.4038240Z ============================================================
+2026-02-01T15:22:45.4038333Z + echo '==> Subscription: ***'
+2026-02-01T15:22:45.4038427Z ==> Subscription: ***
+2026-02-01T15:22:45.4038516Z + az account set --subscription ***
+2026-02-01T15:22:45.9231308Z + echo '==> Removing locks (subscription scope / best-effort)...'
+2026-02-01T15:22:45.9232366Z ==> Removing locks (subscription scope / best-effort)...
+2026-02-01T15:22:45.9232552Z + delete_scope_locks ''
+2026-02-01T15:22:45.9232671Z + local rg=
+2026-02-01T15:22:45.9233265Z + local lock_ids
+2026-02-01T15:22:45.9233479Z + [[ -n '' ]]
+2026-02-01T15:22:45.9239123Z ++ az lock list --query '[].id' -o tsv
+2026-02-01T15:22:47.0186257Z + lock_ids=
+2026-02-01T15:22:47.0187102Z + [[ -z '' ]]
+2026-02-01T15:22:47.0187264Z + return 0
+2026-02-01T15:22:47.0187432Z + disable_network_watcher_all_locations
+2026-02-01T15:22:47.0189672Z + [[ 1 != \1 ]]
+2026-02-01T15:22:47.0190721Z + local locs
+2026-02-01T15:22:47.0194477Z ++ az account list-locations --query '[].name' -o tsv
+2026-02-01T15:22:48.8718346Z + locs='eastus
+2026-02-01T15:22:48.8719273Z westus2
+2026-02-01T15:22:48.8719441Z australiaeast
+2026-02-01T15:22:48.8719526Z southeastasia
+2026-02-01T15:22:48.8719592Z northeurope
+2026-02-01T15:22:48.8719658Z swedencentral
+2026-02-01T15:22:48.8719736Z westeurope
+2026-02-01T15:22:48.8719895Z uksouth
+2026-02-01T15:22:48.8720063Z centralus
+2026-02-01T15:22:48.8720127Z southafricanorth
+2026-02-01T15:22:48.8720185Z centralindia
+2026-02-01T15:22:48.8720245Z eastasia
+2026-02-01T15:22:48.8720303Z indonesiacentral
+2026-02-01T15:22:48.8720359Z japaneast
+2026-02-01T15:22:48.8720428Z japanwest
+2026-02-01T15:22:48.8720486Z koreacentral
+2026-02-01T15:22:48.8720545Z malaysiawest
+2026-02-01T15:22:48.8720605Z newzealandnorth
+2026-02-01T15:22:48.8720686Z canadacentral
+2026-02-01T15:22:48.8720745Z austriaeast
+2026-02-01T15:22:48.8720805Z belgiumcentral
+2026-02-01T15:22:48.8720892Z francecentral
+2026-02-01T15:22:48.8720951Z germanywestcentral
+2026-02-01T15:22:48.8721028Z italynorth
+2026-02-01T15:22:48.8721089Z norwayeast
+2026-02-01T15:22:48.8721147Z polandcentral
+2026-02-01T15:22:48.8721201Z spaincentral
+2026-02-01T15:22:48.8721257Z switzerlandnorth
+2026-02-01T15:22:48.8721361Z mexicocentral
+2026-02-01T15:22:48.8721427Z uaenorth
+2026-02-01T15:22:48.8721520Z brazilsouth
+2026-02-01T15:22:48.8721579Z chilecentral
+2026-02-01T15:22:48.8721638Z eastus2euap
+2026-02-01T15:22:48.8721702Z israelcentral
+2026-02-01T15:22:48.8721758Z qatarcentral
+2026-02-01T15:22:48.8721862Z centralusstage
+2026-02-01T15:22:48.8721924Z eastusstage
+2026-02-01T15:22:48.8721981Z eastus2stage
+2026-02-01T15:22:48.8722037Z northcentralusstage
+2026-02-01T15:22:48.8722098Z southcentralusstage
+2026-02-01T15:22:48.8722161Z westusstage
+2026-02-01T15:22:48.8722216Z westus2stage
+2026-02-01T15:22:48.8722283Z asia
+2026-02-01T15:22:48.8722343Z asiapacific
+2026-02-01T15:22:48.8722400Z australia
+2026-02-01T15:22:48.8722452Z brazil
+2026-02-01T15:22:48.8722507Z canada
+2026-02-01T15:22:48.8722561Z europe
+2026-02-01T15:22:48.8722614Z france
+2026-02-01T15:22:48.8722675Z germany
+2026-02-01T15:22:48.8722730Z global
+2026-02-01T15:22:48.8722791Z india
+2026-02-01T15:22:48.8722847Z indonesia
+2026-02-01T15:22:48.8723150Z israel
+2026-02-01T15:22:48.8723234Z italy
+2026-02-01T15:22:48.8723313Z japan
+2026-02-01T15:22:48.8723401Z korea
+2026-02-01T15:22:48.8723463Z malaysia
+2026-02-01T15:22:48.8723524Z mexico
+2026-02-01T15:22:48.8723581Z newzealand
+2026-02-01T15:22:48.8723643Z norway
+2026-02-01T15:22:48.8723732Z poland
+2026-02-01T15:22:48.8723809Z qatar
+2026-02-01T15:22:48.8723882Z singapore
+2026-02-01T15:22:48.8724533Z southafrica
+2026-02-01T15:22:48.8724593Z spain
+2026-02-01T15:22:48.8724640Z sweden
+2026-02-01T15:22:48.8724695Z switzerland
+2026-02-01T15:22:48.8724738Z taiwan
+2026-02-01T15:22:48.8724780Z uae
+2026-02-01T15:22:48.8724846Z uk
+2026-02-01T15:22:48.8724885Z unitedstates
+2026-02-01T15:22:48.8724933Z unitedstateseuap
+2026-02-01T15:22:48.8724975Z eastasiastage
+2026-02-01T15:22:48.8725017Z southeastasiastage
+2026-02-01T15:22:48.8725054Z eastus2
+2026-02-01T15:22:48.8725090Z eastusstg
+2026-02-01T15:22:48.8725135Z southcentralus
+2026-02-01T15:22:48.8725176Z westus3
+2026-02-01T15:22:48.8725217Z northcentralus
+2026-02-01T15:22:48.8725254Z westus
+2026-02-01T15:22:48.8725290Z jioindiawest
+2026-02-01T15:22:48.8725337Z centraluseuap
+2026-02-01T15:22:48.8725404Z southcentralusstg
+2026-02-01T15:22:48.8725451Z westcentralus
+2026-02-01T15:22:48.8725488Z southafricawest
+2026-02-01T15:22:48.8725539Z australiacentral
+2026-02-01T15:22:48.8725577Z australiacentral2
+2026-02-01T15:22:48.8725616Z australiasoutheast
+2026-02-01T15:22:48.8725658Z jioindiacentral
+2026-02-01T15:22:48.8725700Z koreasouth
+2026-02-01T15:22:48.8725742Z southindia
+2026-02-01T15:22:48.8726726Z westindia
+2026-02-01T15:22:48.8726871Z canadaeast
+2026-02-01T15:22:48.8726974Z francesouth
+2026-02-01T15:22:48.8727071Z germanynorth
+2026-02-01T15:22:48.8727172Z norwaywest
+2026-02-01T15:22:48.8727265Z switzerlandwest
+2026-02-01T15:22:48.8727395Z uaecentral
+2026-02-01T15:22:48.8727493Z brazilsoutheast
+2026-02-01T15:22:48.8727590Z ukwest'
+2026-02-01T15:22:48.8728200Z + [[ -z eastus
+2026-02-01T15:22:48.8728321Z westus2
+2026-02-01T15:22:48.8728396Z australiaeast
+2026-02-01T15:22:48.8728468Z southeastasia
+2026-02-01T15:22:48.8728569Z northeurope
+2026-02-01T15:22:48.8728638Z swedencentral
+2026-02-01T15:22:48.8728696Z westeurope
+2026-02-01T15:22:48.8728770Z uksouth
+2026-02-01T15:22:48.8728862Z centralus
+2026-02-01T15:22:48.8728925Z southafricanorth
+2026-02-01T15:22:48.8728983Z centralindia
+2026-02-01T15:22:48.8729059Z eastasia
+2026-02-01T15:22:48.8729122Z indonesiacentral
+2026-02-01T15:22:48.8729181Z japaneast
+2026-02-01T15:22:48.8729240Z japanwest
+2026-02-01T15:22:48.8729299Z koreacentral
+2026-02-01T15:22:48.8729355Z malaysiawest
+2026-02-01T15:22:48.8729410Z newzealandnorth
+2026-02-01T15:22:48.8729495Z canadacentral
+2026-02-01T15:22:48.8729561Z austriaeast
+2026-02-01T15:22:48.8729642Z belgiumcentral
+2026-02-01T15:22:48.8729705Z francecentral
+2026-02-01T15:22:48.8729771Z germanywestcentral
+2026-02-01T15:22:48.8729844Z italynorth
+2026-02-01T15:22:48.8729901Z norwayeast
+2026-02-01T15:22:48.8729971Z polandcentral
+2026-02-01T15:22:48.8730026Z spaincentral
+2026-02-01T15:22:48.8730082Z switzerlandnorth
+2026-02-01T15:22:48.8730167Z mexicocentral
+2026-02-01T15:22:48.8730226Z uaenorth
+2026-02-01T15:22:48.8730283Z brazilsouth
+2026-02-01T15:22:48.8730339Z chilecentral
+2026-02-01T15:22:48.8730403Z eastus2euap
+2026-02-01T15:22:48.8730464Z israelcentral
+2026-02-01T15:22:48.8730521Z qatarcentral
+2026-02-01T15:22:48.8730584Z centralusstage
+2026-02-01T15:22:48.8730643Z eastusstage
+2026-02-01T15:22:48.8730702Z eastus2stage
+2026-02-01T15:22:48.8730759Z northcentralusstage
+2026-02-01T15:22:48.8730827Z southcentralusstage
+2026-02-01T15:22:48.8730888Z westusstage
+2026-02-01T15:22:48.8730943Z westus2stage
+2026-02-01T15:22:48.8731004Z asia
+2026-02-01T15:22:48.8731061Z asiapacific
+2026-02-01T15:22:48.8731125Z australia
+2026-02-01T15:22:48.8731182Z brazil
+2026-02-01T15:22:48.8731247Z canada
+2026-02-01T15:22:48.8731303Z europe
+2026-02-01T15:22:48.8731358Z france
+2026-02-01T15:22:48.8731414Z germany
+2026-02-01T15:22:48.8731467Z global
+2026-02-01T15:22:48.8731530Z india
+2026-02-01T15:22:48.8731589Z indonesia
+2026-02-01T15:22:48.8731652Z israel
+2026-02-01T15:22:48.8731709Z italy
+2026-02-01T15:22:48.8731765Z japan
+2026-02-01T15:22:48.8731820Z korea
+2026-02-01T15:22:48.8731877Z malaysia
+2026-02-01T15:22:48.8731932Z mexico
+2026-02-01T15:22:48.8731988Z newzealand
+2026-02-01T15:22:48.8732051Z norway
+2026-02-01T15:22:48.8732107Z poland
+2026-02-01T15:22:48.8732161Z qatar
+2026-02-01T15:22:48.8732216Z singapore
+2026-02-01T15:22:48.8732491Z southafrica
+2026-02-01T15:22:48.8732595Z spain
+2026-02-01T15:22:48.8732661Z sweden
+2026-02-01T15:22:48.8732746Z switzerland
+2026-02-01T15:22:48.8732816Z taiwan
+2026-02-01T15:22:48.8732872Z uae
+2026-02-01T15:22:48.8732930Z uk
+2026-02-01T15:22:48.8732996Z unitedstates
+2026-02-01T15:22:48.8733062Z unitedstateseuap
+2026-02-01T15:22:48.8733131Z eastasiastage
+2026-02-01T15:22:48.8733198Z southeastasiastage
+2026-02-01T15:22:48.8733259Z eastus2
+2026-02-01T15:22:48.8733327Z eastusstg
+2026-02-01T15:22:48.8733389Z southcentralus
+2026-02-01T15:22:48.8733466Z westus3
+2026-02-01T15:22:48.8733527Z northcentralus
+2026-02-01T15:22:48.8733586Z westus
+2026-02-01T15:22:48.8733649Z jioindiawest
+2026-02-01T15:22:48.8733713Z centraluseuap
+2026-02-01T15:22:48.8733773Z southcentralusstg
+2026-02-01T15:22:48.8733832Z westcentralus
+2026-02-01T15:22:48.8733891Z southafricawest
+2026-02-01T15:22:48.8733948Z australiacentral
+2026-02-01T15:22:48.8734059Z australiacentral2
+2026-02-01T15:22:48.8734132Z australiasoutheast
+2026-02-01T15:22:48.8734194Z jioindiacentral
+2026-02-01T15:22:48.8734249Z koreasouth
+2026-02-01T15:22:48.8734313Z southindia
+2026-02-01T15:22:48.8734379Z westindia
+2026-02-01T15:22:48.8734446Z canadaeast
+2026-02-01T15:22:48.8734510Z francesouth
+2026-02-01T15:22:48.8734589Z germanynorth
+2026-02-01T15:22:48.8734653Z norwaywest
+2026-02-01T15:22:48.8734719Z switzerlandwest
+2026-02-01T15:22:48.8734787Z uaecentral
+2026-02-01T15:22:48.8734853Z brazilsoutheast
+2026-02-01T15:22:48.8734912Z ukwest ]]
+2026-02-01T15:22:48.8734976Z + echo '==> Disabling Network Watcher (best-effort) in all locations...'
+2026-02-01T15:22:48.8735074Z ==> Disabling Network Watcher (best-effort) in all locations...
+2026-02-01T15:22:48.8735171Z + IFS=
+2026-02-01T15:22:48.8735238Z + read -r loc
+2026-02-01T15:22:48.8735296Z + [[ -z eastus ]]
+2026-02-01T15:22:48.8735359Z + [[ 0 == \1 ]]
+2026-02-01T15:22:48.8735421Z + az network watcher configure --locations eastus --enabled false
+2026-02-01T15:22:51.0608787Z + IFS=
+2026-02-01T15:22:51.0609567Z + read -r loc
+2026-02-01T15:22:51.0610040Z + [[ -z westus2 ]]
+2026-02-01T15:22:51.0610157Z + [[ 0 == \1 ]]
+2026-02-01T15:22:51.0610244Z + az network watcher configure --locations westus2 --enabled false
+2026-02-01T15:22:53.0187642Z + IFS=
+2026-02-01T15:22:53.0188812Z + read -r loc
+2026-02-01T15:22:53.0189431Z + [[ -z australiaeast ]]
+2026-02-01T15:22:53.0189682Z + [[ 0 == \1 ]]
+2026-02-01T15:22:53.0189790Z + az network watcher configure --locations australiaeast --enabled false
+2026-02-01T15:22:55.3692555Z + IFS=
+2026-02-01T15:22:55.3693392Z + read -r loc
+2026-02-01T15:22:55.3693537Z + [[ -z southeastasia ]]
+2026-02-01T15:22:55.3693677Z + [[ 0 == \1 ]]
+2026-02-01T15:22:55.3693756Z + az network watcher configure --locations southeastasia --enabled false
+2026-02-01T15:22:57.7959644Z + IFS=
+2026-02-01T15:22:57.7961049Z + read -r loc
+2026-02-01T15:22:57.7961607Z + [[ -z northeurope ]]
+2026-02-01T15:22:57.7961911Z + [[ 0 == \1 ]]
+2026-02-01T15:22:57.7961982Z + az network watcher configure --locations northeurope --enabled false
+2026-02-01T15:22:59.8978306Z + IFS=
+2026-02-01T15:22:59.8978887Z + read -r loc
+2026-02-01T15:22:59.8978961Z + [[ -z swedencentral ]]
+2026-02-01T15:22:59.8979052Z + [[ 0 == \1 ]]
+2026-02-01T15:22:59.8979255Z + az network watcher configure --locations swedencentral --enabled false
+2026-02-01T15:23:01.8390288Z + IFS=
+2026-02-01T15:23:01.8391252Z + read -r loc
+2026-02-01T15:23:01.8391382Z + [[ -z westeurope ]]
+2026-02-01T15:23:01.8391529Z + [[ 0 == \1 ]]
+2026-02-01T15:23:01.8391599Z + az network watcher configure --locations westeurope --enabled false
+2026-02-01T15:23:05.1469263Z + IFS=
+2026-02-01T15:23:05.1469717Z + read -r loc
+2026-02-01T15:23:05.1469774Z + [[ -z uksouth ]]
+2026-02-01T15:23:05.1469811Z + [[ 0 == \1 ]]
+2026-02-01T15:23:05.1469849Z + az network watcher configure --locations uksouth --enabled false
+2026-02-01T15:23:06.8472924Z + IFS=
+2026-02-01T15:23:06.8473660Z + read -r loc
+2026-02-01T15:23:06.8473829Z + [[ -z centralus ]]
+2026-02-01T15:23:06.8473955Z + [[ 0 == \1 ]]
+2026-02-01T15:23:06.8474021Z + az network watcher configure --locations centralus --enabled false
+2026-02-01T15:23:08.5888128Z + IFS=
+2026-02-01T15:23:08.5888718Z + read -r loc
+2026-02-01T15:23:08.5888814Z + [[ -z southafricanorth ]]
+2026-02-01T15:23:08.5888876Z + [[ 0 == \1 ]]
+2026-02-01T15:23:08.5888923Z + az network watcher configure --locations southafricanorth --enabled false
+2026-02-01T15:23:10.2841010Z + IFS=
+2026-02-01T15:23:10.2841892Z + read -r loc
+2026-02-01T15:23:10.2842553Z + [[ -z centralindia ]]
+2026-02-01T15:23:10.2842709Z + [[ 0 == \1 ]]
+2026-02-01T15:23:10.2842797Z + az network watcher configure --locations centralindia --enabled false
+2026-02-01T15:23:12.1741212Z + IFS=
+2026-02-01T15:23:12.1742338Z + read -r loc
+2026-02-01T15:23:12.1742460Z + [[ -z eastasia ]]
+2026-02-01T15:23:12.1742523Z + [[ 0 == \1 ]]
+2026-02-01T15:23:12.1742600Z + az network watcher configure --locations eastasia --enabled false
+2026-02-01T15:23:14.1125019Z + IFS=
+2026-02-01T15:23:14.1125578Z + read -r loc
+2026-02-01T15:23:14.1125649Z + [[ -z indonesiacentral ]]
+2026-02-01T15:23:14.1125707Z + [[ 0 == \1 ]]
+2026-02-01T15:23:14.1126010Z + az network watcher configure --locations indonesiacentral --enabled false
+2026-02-01T15:23:16.0160193Z + IFS=
+2026-02-01T15:23:16.0161821Z + read -r loc
+2026-02-01T15:23:16.0162045Z + [[ -z japaneast ]]
+2026-02-01T15:23:16.0162209Z + [[ 0 == \1 ]]
+2026-02-01T15:23:16.0162295Z + az network watcher configure --locations japaneast --enabled false
+2026-02-01T15:23:18.2945744Z + IFS=
+2026-02-01T15:23:18.2946564Z + read -r loc
+2026-02-01T15:23:18.2946769Z + [[ -z japanwest ]]
+2026-02-01T15:23:18.2946852Z + [[ 0 == \1 ]]
+2026-02-01T15:23:18.2946947Z + az network watcher configure --locations japanwest --enabled false
+2026-02-01T15:23:20.3785698Z + IFS=
+2026-02-01T15:23:20.3786865Z + read -r loc
+2026-02-01T15:23:20.3787022Z + [[ -z koreacentral ]]
+2026-02-01T15:23:20.3787132Z + [[ 0 == \1 ]]
+2026-02-01T15:23:20.3787708Z + az network watcher configure --locations koreacentral --enabled false
+2026-02-01T15:23:22.8226062Z + IFS=
+2026-02-01T15:23:22.8226963Z + read -r loc
+2026-02-01T15:23:22.8227125Z + [[ -z malaysiawest ]]
+2026-02-01T15:23:22.8227218Z + [[ 0 == \1 ]]
+2026-02-01T15:23:22.8227336Z + az network watcher configure --locations malaysiawest --enabled false
+2026-02-01T15:23:24.9859914Z + IFS=
+2026-02-01T15:23:24.9860939Z + read -r loc
+2026-02-01T15:23:24.9861123Z + [[ -z newzealandnorth ]]
+2026-02-01T15:23:24.9861723Z + [[ 0 == \1 ]]
+2026-02-01T15:23:24.9862088Z + az network watcher configure --locations newzealandnorth --enabled false
+2026-02-01T15:23:26.5553265Z + IFS=
+2026-02-01T15:23:26.5553960Z + read -r loc
+2026-02-01T15:23:26.5554074Z + [[ -z canadacentral ]]
+2026-02-01T15:23:26.5554131Z + [[ 0 == \1 ]]
+2026-02-01T15:23:26.5554178Z + az network watcher configure --locations canadacentral --enabled false
+2026-02-01T15:23:28.4708053Z + IFS=
+2026-02-01T15:23:28.4708651Z + read -r loc
+2026-02-01T15:23:28.4708721Z + [[ -z austriaeast ]]
+2026-02-01T15:23:28.4708772Z + [[ 0 == \1 ]]
+2026-02-01T15:23:28.4708875Z + az network watcher configure --locations austriaeast --enabled false
+2026-02-01T15:23:30.2410679Z + IFS=
+2026-02-01T15:23:30.2412150Z + read -r loc
+2026-02-01T15:23:30.2412399Z + [[ -z belgiumcentral ]]
+2026-02-01T15:23:30.2412490Z + [[ 0 == \1 ]]
+2026-02-01T15:23:30.2412561Z + az network watcher configure --locations belgiumcentral --enabled false
+2026-02-01T15:23:32.2679385Z + IFS=
+2026-02-01T15:23:32.2680033Z + read -r loc
+2026-02-01T15:23:32.2680122Z + [[ -z francecentral ]]
+2026-02-01T15:23:32.2680174Z + [[ 0 == \1 ]]
+2026-02-01T15:23:32.2680228Z + az network watcher configure --locations francecentral --enabled false
+2026-02-01T15:23:34.1367184Z + IFS=
+2026-02-01T15:23:34.1368190Z + read -r loc
+2026-02-01T15:23:34.1368947Z + [[ -z germanywestcentral ]]
+2026-02-01T15:23:34.1369083Z + [[ 0 == \1 ]]
+2026-02-01T15:23:34.1369175Z + az network watcher configure --locations germanywestcentral --enabled false
+2026-02-01T15:23:36.1078377Z + IFS=
+2026-02-01T15:23:36.1079573Z + read -r loc
+2026-02-01T15:23:36.1080144Z + [[ -z italynorth ]]
+2026-02-01T15:23:36.1080299Z + [[ 0 == \1 ]]
+2026-02-01T15:23:36.1080453Z + az network watcher configure --locations italynorth --enabled false
+2026-02-01T15:23:38.1338860Z + IFS=
+2026-02-01T15:23:38.1340099Z + read -r loc
+2026-02-01T15:23:38.1340396Z + [[ -z norwayeast ]]
+2026-02-01T15:23:38.1340990Z + [[ 0 == \1 ]]
+2026-02-01T15:23:38.1341136Z + az network watcher configure --locations norwayeast --enabled false
+2026-02-01T15:23:40.2088680Z + IFS=
+2026-02-01T15:23:40.2089780Z + read -r loc
+2026-02-01T15:23:40.2090165Z + [[ -z polandcentral ]]
+2026-02-01T15:23:40.2090229Z + [[ 0 == \1 ]]
+2026-02-01T15:23:40.2090447Z + az network watcher configure --locations polandcentral --enabled false
+2026-02-01T15:23:41.9340798Z + IFS=
+2026-02-01T15:23:41.9341384Z + read -r loc
+2026-02-01T15:23:41.9341530Z + [[ -z spaincentral ]]
+2026-02-01T15:23:41.9343499Z + [[ 0 == \1 ]]
+2026-02-01T15:23:41.9343830Z + az network watcher configure --locations spaincentral --enabled false
+2026-02-01T15:23:43.8262938Z + IFS=
+2026-02-01T15:23:43.8263595Z + read -r loc
+2026-02-01T15:23:43.8263674Z + [[ -z switzerlandnorth ]]
+2026-02-01T15:23:43.8263732Z + [[ 0 == \1 ]]
+2026-02-01T15:23:43.8263827Z + az network watcher configure --locations switzerlandnorth --enabled false
+2026-02-01T15:23:45.6000709Z + IFS=
+2026-02-01T15:23:45.6001864Z + read -r loc
+2026-02-01T15:23:45.6002069Z + [[ -z mexicocentral ]]
+2026-02-01T15:23:45.6002169Z + [[ 0 == \1 ]]
+2026-02-01T15:23:45.6004262Z + az network watcher configure --locations mexicocentral --enabled false
+2026-02-01T15:23:47.5479296Z + IFS=
+2026-02-01T15:23:47.5479776Z + read -r loc
+2026-02-01T15:23:47.5479838Z + [[ -z uaenorth ]]
+2026-02-01T15:23:47.5479924Z + [[ 0 == \1 ]]
+2026-02-01T15:23:47.5479982Z + az network watcher configure --locations uaenorth --enabled false
+2026-02-01T15:23:50.3857757Z + IFS=
+2026-02-01T15:23:50.3858257Z + read -r loc
+2026-02-01T15:23:50.3858325Z + [[ -z brazilsouth ]]
+2026-02-01T15:23:50.3858368Z + [[ 0 == \1 ]]
+2026-02-01T15:23:50.3858413Z + az network watcher configure --locations brazilsouth --enabled false
+2026-02-01T15:23:52.1521285Z + IFS=
+2026-02-01T15:23:52.1522659Z + read -r loc
+2026-02-01T15:23:52.1523131Z + [[ -z chilecentral ]]
+2026-02-01T15:23:52.1523185Z + [[ 0 == \1 ]]
+2026-02-01T15:23:52.1523242Z + az network watcher configure --locations chilecentral --enabled false
+2026-02-01T15:23:54.1456718Z + IFS=
+2026-02-01T15:23:54.1457603Z + read -r loc
+2026-02-01T15:23:54.1457781Z + [[ -z eastus2euap ]]
+2026-02-01T15:23:54.1458234Z + [[ 0 == \1 ]]
+2026-02-01T15:23:54.1458365Z + az network watcher configure --locations eastus2euap --enabled false
+2026-02-01T15:23:56.0213716Z + IFS=
+2026-02-01T15:23:56.0215289Z + read -r loc
+2026-02-01T15:23:56.0215536Z + [[ -z israelcentral ]]
+2026-02-01T15:23:56.0216675Z + [[ 0 == \1 ]]
+2026-02-01T15:23:56.0216941Z + az network watcher configure --locations israelcentral --enabled false
+2026-02-01T15:23:57.9545592Z + IFS=
+2026-02-01T15:23:57.9546243Z + read -r loc
+2026-02-01T15:23:57.9546315Z + [[ -z qatarcentral ]]
+2026-02-01T15:23:57.9546365Z + [[ 0 == \1 ]]
+2026-02-01T15:23:57.9546414Z + az network watcher configure --locations qatarcentral --enabled false
+2026-02-01T15:24:00.0637728Z + IFS=
+2026-02-01T15:24:00.0638786Z + read -r loc
+2026-02-01T15:24:00.0639740Z + [[ -z centralusstage ]]
+2026-02-01T15:24:00.0639992Z + [[ 0 == \1 ]]
+2026-02-01T15:24:00.0640185Z + az network watcher configure --locations centralusstage --enabled false
+2026-02-01T15:24:01.6406853Z + IFS=
+2026-02-01T15:24:01.6408091Z + read -r loc
+2026-02-01T15:24:01.6408899Z + [[ -z eastusstage ]]
+2026-02-01T15:24:01.6408995Z + [[ 0 == \1 ]]
+2026-02-01T15:24:01.6409058Z + az network watcher configure --locations eastusstage --enabled false
+2026-02-01T15:24:04.0498664Z + IFS=
+2026-02-01T15:24:04.0499515Z + read -r loc
+2026-02-01T15:24:04.0499704Z + [[ -z eastus2stage ]]
+2026-02-01T15:24:04.0499786Z + [[ 0 == \1 ]]
+2026-02-01T15:24:04.0499887Z + az network watcher configure --locations eastus2stage --enabled false
+2026-02-01T15:24:05.7366608Z + IFS=
+2026-02-01T15:24:05.7367511Z + read -r loc
+2026-02-01T15:24:05.7367716Z + [[ -z northcentralusstage ]]
+2026-02-01T15:24:05.7367836Z + [[ 0 == \1 ]]
+2026-02-01T15:24:05.7367956Z + az network watcher configure --locations northcentralusstage --enabled false
+2026-02-01T15:24:07.2595528Z + IFS=
+2026-02-01T15:24:07.2596775Z + read -r loc
+2026-02-01T15:24:07.2596935Z + [[ -z southcentralusstage ]]
+2026-02-01T15:24:07.2597493Z + [[ 0 == \1 ]]
+2026-02-01T15:24:07.2597674Z + az network watcher configure --locations southcentralusstage --enabled false
+2026-02-01T15:24:09.1793099Z + IFS=
+2026-02-01T15:24:09.1793662Z + read -r loc
+2026-02-01T15:24:09.1793734Z + [[ -z westusstage ]]
+2026-02-01T15:24:09.1793804Z + [[ 0 == \1 ]]
+2026-02-01T15:24:09.1793974Z + az network watcher configure --locations westusstage --enabled false
+2026-02-01T15:24:10.8790858Z + IFS=
+2026-02-01T15:24:10.8791541Z + read -r loc
+2026-02-01T15:24:10.8793481Z + [[ -z westus2stage ]]
+2026-02-01T15:24:10.8794037Z + [[ 0 == \1 ]]
+2026-02-01T15:24:10.8794151Z + az network watcher configure --locations westus2stage --enabled false
+2026-02-01T15:24:12.7571370Z + IFS=
+2026-02-01T15:24:12.7572108Z + read -r loc
+2026-02-01T15:24:12.7572369Z + [[ -z asia ]]
+2026-02-01T15:24:12.7572432Z + [[ 0 == \1 ]]
+2026-02-01T15:24:12.7572498Z + az network watcher configure --locations asia --enabled false
+2026-02-01T15:24:14.8518076Z + IFS=
+2026-02-01T15:24:14.8519139Z + read -r loc
+2026-02-01T15:24:14.8519287Z + [[ -z asiapacific ]]
+2026-02-01T15:24:14.8519425Z + [[ 0 == \1 ]]
+2026-02-01T15:24:14.8519540Z + az network watcher configure --locations asiapacific --enabled false
+2026-02-01T15:24:16.6304603Z + IFS=
+2026-02-01T15:24:16.6305580Z + read -r loc
+2026-02-01T15:24:16.6305966Z + [[ -z australia ]]
+2026-02-01T15:24:16.6306957Z + [[ 0 == \1 ]]
+2026-02-01T15:24:16.6307308Z + az network watcher configure --locations australia --enabled false
+2026-02-01T15:24:18.3154926Z + IFS=
+2026-02-01T15:24:18.3155438Z + read -r loc
+2026-02-01T15:24:18.3155510Z + [[ -z brazil ]]
+2026-02-01T15:24:18.3155557Z + [[ 0 == \1 ]]
+2026-02-01T15:24:18.3155647Z + az network watcher configure --locations brazil --enabled false
+2026-02-01T15:24:20.5174440Z + IFS=
+2026-02-01T15:24:20.5175305Z + read -r loc
+2026-02-01T15:24:20.5176119Z + [[ -z canada ]]
+2026-02-01T15:24:20.5176280Z + [[ 0 == \1 ]]
+2026-02-01T15:24:20.5176366Z + az network watcher configure --locations canada --enabled false
+2026-02-01T15:24:22.4598036Z + IFS=
+2026-02-01T15:24:22.4598764Z + read -r loc
+2026-02-01T15:24:22.4598903Z + [[ -z europe ]]
+2026-02-01T15:24:22.4599262Z + [[ 0 == \1 ]]
+2026-02-01T15:24:22.4599460Z + az network watcher configure --locations europe --enabled false
+2026-02-01T15:24:24.6709481Z + IFS=
+2026-02-01T15:24:24.6710479Z + read -r loc
+2026-02-01T15:24:24.6710672Z + [[ -z france ]]
+2026-02-01T15:24:24.6710757Z + [[ 0 == \1 ]]
+2026-02-01T15:24:24.6710917Z + az network watcher configure --locations france --enabled false
+2026-02-01T15:24:26.4742268Z + IFS=
+2026-02-01T15:24:26.4743399Z + read -r loc
+2026-02-01T15:24:26.4743672Z + [[ -z germany ]]
+2026-02-01T15:24:26.4743872Z + [[ 0 == \1 ]]
+2026-02-01T15:24:26.4743933Z + az network watcher configure --locations germany --enabled false
+2026-02-01T15:24:28.0740491Z + IFS=
+2026-02-01T15:24:28.0741104Z + read -r loc
+2026-02-01T15:24:28.0741204Z + [[ -z global ]]
+2026-02-01T15:24:28.0741294Z + [[ 0 == \1 ]]
+2026-02-01T15:24:28.0741437Z + az network watcher configure --locations global --enabled false
+2026-02-01T15:24:30.1044556Z + IFS=
+2026-02-01T15:24:30.1045075Z + read -r loc
+2026-02-01T15:24:30.1045177Z + [[ -z india ]]
+2026-02-01T15:24:30.1045248Z + [[ 0 == \1 ]]
+2026-02-01T15:24:30.1045412Z + az network watcher configure --locations india --enabled false
+2026-02-01T15:24:31.5780635Z + IFS=
+2026-02-01T15:24:31.5781555Z + read -r loc
+2026-02-01T15:24:31.5781739Z + [[ -z indonesia ]]
+2026-02-01T15:24:31.5781849Z + [[ 0 == \1 ]]
+2026-02-01T15:24:31.5781976Z + az network watcher configure --locations indonesia --enabled false
+2026-02-01T15:24:33.2688476Z + IFS=
+2026-02-01T15:24:33.2689374Z + read -r loc
+2026-02-01T15:24:33.2689546Z + [[ -z israel ]]
+2026-02-01T15:24:33.2689623Z + [[ 0 == \1 ]]
+2026-02-01T15:24:33.2689781Z + az network watcher configure --locations israel --enabled false
+2026-02-01T15:24:35.1571177Z + IFS=
+2026-02-01T15:24:35.1572250Z + read -r loc
+2026-02-01T15:24:35.1572658Z + [[ -z italy ]]
+2026-02-01T15:24:35.1572710Z + [[ 0 == \1 ]]
+2026-02-01T15:24:35.1572758Z + az network watcher configure --locations italy --enabled false
+2026-02-01T15:24:36.8974857Z + IFS=
+2026-02-01T15:24:36.8975658Z + read -r loc
+2026-02-01T15:24:36.8976095Z + [[ -z japan ]]
+2026-02-01T15:24:36.8976231Z + [[ 0 == \1 ]]
+2026-02-01T15:24:36.8976316Z + az network watcher configure --locations japan --enabled false
+2026-02-01T15:24:38.7775467Z + IFS=
+2026-02-01T15:24:38.7777038Z + read -r loc
+2026-02-01T15:24:38.7777270Z + [[ -z korea ]]
+2026-02-01T15:24:38.7777425Z + [[ 0 == \1 ]]
+2026-02-01T15:24:38.7777714Z + az network watcher configure --locations korea --enabled false
+2026-02-01T15:24:40.5471974Z + IFS=
+2026-02-01T15:24:40.5473171Z + read -r loc
+2026-02-01T15:24:40.5473428Z + [[ -z malaysia ]]
+2026-02-01T15:24:40.5473562Z + [[ 0 == \1 ]]
+2026-02-01T15:24:40.5473868Z + az network watcher configure --locations malaysia --enabled false
+2026-02-01T15:24:42.4262945Z + IFS=
+2026-02-01T15:24:42.4263661Z + read -r loc
+2026-02-01T15:24:42.4263743Z + [[ -z mexico ]]
+2026-02-01T15:24:42.4263801Z + [[ 0 == \1 ]]
+2026-02-01T15:24:42.4264053Z + az network watcher configure --locations mexico --enabled false
+2026-02-01T15:24:44.5379565Z + IFS=
+2026-02-01T15:24:44.5380221Z + read -r loc
+2026-02-01T15:24:44.5380349Z + [[ -z newzealand ]]
+2026-02-01T15:24:44.5380416Z + [[ 0 == \1 ]]
+2026-02-01T15:24:44.5381125Z + az network watcher configure --locations newzealand --enabled false
+2026-02-01T15:24:46.5968871Z + IFS=
+2026-02-01T15:24:46.5969930Z + read -r loc
+2026-02-01T15:24:46.5970142Z + [[ -z norway ]]
+2026-02-01T15:24:46.5970427Z + [[ 0 == \1 ]]
+2026-02-01T15:24:46.5970547Z + az network watcher configure --locations norway --enabled false
+2026-02-01T15:24:48.5234710Z + IFS=
+2026-02-01T15:24:48.5235354Z + read -r loc
+2026-02-01T15:24:48.5235560Z + [[ -z poland ]]
+2026-02-01T15:24:48.5235632Z + [[ 0 == \1 ]]
+2026-02-01T15:24:48.5235717Z + az network watcher configure --locations poland --enabled false
+2026-02-01T15:24:50.3706891Z + IFS=
+2026-02-01T15:24:50.3707524Z + read -r loc
+2026-02-01T15:24:50.3707604Z + [[ -z qatar ]]
+2026-02-01T15:24:50.3708124Z + [[ 0 == \1 ]]
+2026-02-01T15:24:50.3708184Z + az network watcher configure --locations qatar --enabled false
+2026-02-01T15:24:52.1889565Z + IFS=
+2026-02-01T15:24:52.1890377Z + read -r loc
+2026-02-01T15:24:52.1890506Z + [[ -z singapore ]]
+2026-02-01T15:24:52.1890589Z + [[ 0 == \1 ]]
+2026-02-01T15:24:52.1890666Z + az network watcher configure --locations singapore --enabled false
+2026-02-01T15:24:54.2781949Z + IFS=
+2026-02-01T15:24:54.2782707Z + read -r loc
+2026-02-01T15:24:54.2782822Z + [[ -z southafrica ]]
+2026-02-01T15:24:54.2782987Z + [[ 0 == \1 ]]
+2026-02-01T15:24:54.2783052Z + az network watcher configure --locations southafrica --enabled false
+2026-02-01T15:24:56.4219740Z + IFS=
+2026-02-01T15:24:56.4220600Z + read -r loc
+2026-02-01T15:24:56.4221154Z + [[ -z spain ]]
+2026-02-01T15:24:56.4221334Z + [[ 0 == \1 ]]
+2026-02-01T15:24:56.4221386Z + az network watcher configure --locations spain --enabled false
+2026-02-01T15:24:58.0299707Z + IFS=
+2026-02-01T15:24:58.0300253Z + read -r loc
+2026-02-01T15:24:58.0300410Z + [[ -z sweden ]]
+2026-02-01T15:24:58.0300458Z + [[ 0 == \1 ]]
+2026-02-01T15:24:58.0300510Z + az network watcher configure --locations sweden --enabled false
+2026-02-01T15:25:00.0779027Z + IFS=
+2026-02-01T15:25:00.0779910Z + read -r loc
+2026-02-01T15:25:00.0780050Z + [[ -z switzerland ]]
+2026-02-01T15:25:00.0780181Z + [[ 0 == \1 ]]
+2026-02-01T15:25:00.0780343Z + az network watcher configure --locations switzerland --enabled false
+2026-02-01T15:25:02.0921328Z + IFS=
+2026-02-01T15:25:02.0922670Z + read -r loc
+2026-02-01T15:25:02.0922888Z + [[ -z taiwan ]]
+2026-02-01T15:25:02.0922992Z + [[ 0 == \1 ]]
+2026-02-01T15:25:02.0923074Z + az network watcher configure --locations taiwan --enabled false
+2026-02-01T15:25:04.2567890Z + IFS=
+2026-02-01T15:25:04.2568749Z + read -r loc
+2026-02-01T15:25:04.2569236Z + [[ -z uae ]]
+2026-02-01T15:25:04.2569360Z + [[ 0 == \1 ]]
+2026-02-01T15:25:04.2569523Z + az network watcher configure --locations uae --enabled false
+2026-02-01T15:25:06.3169026Z + IFS=
+2026-02-01T15:25:06.3170457Z + read -r loc
+2026-02-01T15:25:06.3172620Z + [[ -z uk ]]
+2026-02-01T15:25:06.3173129Z + [[ 0 == \1 ]]
+2026-02-01T15:25:06.3173286Z + az network watcher configure --locations uk --enabled false
+2026-02-01T15:25:08.3715910Z + IFS=
+2026-02-01T15:25:08.3716615Z + read -r loc
+2026-02-01T15:25:08.3716766Z + [[ -z unitedstates ]]
+2026-02-01T15:25:08.3716850Z + [[ 0 == \1 ]]
+2026-02-01T15:25:08.3716999Z + az network watcher configure --locations unitedstates --enabled false
+2026-02-01T15:25:10.1766661Z + IFS=
+2026-02-01T15:25:10.1767677Z + read -r loc
+2026-02-01T15:25:10.1767881Z + [[ -z unitedstateseuap ]]
+2026-02-01T15:25:10.1767974Z + [[ 0 == \1 ]]
+2026-02-01T15:25:10.1768095Z + az network watcher configure --locations unitedstateseuap --enabled false
+2026-02-01T15:25:12.2233239Z + IFS=
+2026-02-01T15:25:12.2234085Z + read -r loc
+2026-02-01T15:25:12.2237061Z + [[ -z eastasiastage ]]
+2026-02-01T15:25:12.2237172Z + [[ 0 == \1 ]]
+2026-02-01T15:25:12.2237233Z + az network watcher configure --locations eastasiastage --enabled false
+2026-02-01T15:25:14.1564900Z + IFS=
+2026-02-01T15:25:14.1565753Z + read -r loc
+2026-02-01T15:25:14.1566404Z + [[ -z southeastasiastage ]]
+2026-02-01T15:25:14.1566937Z + [[ 0 == \1 ]]
+2026-02-01T15:25:14.1567151Z + az network watcher configure --locations southeastasiastage --enabled false
+2026-02-01T15:25:15.7436388Z + IFS=
+2026-02-01T15:25:15.7436899Z + read -r loc
+2026-02-01T15:25:15.7436966Z + [[ -z eastus2 ]]
+2026-02-01T15:25:15.7437058Z + [[ 0 == \1 ]]
+2026-02-01T15:25:15.7437115Z + az network watcher configure --locations eastus2 --enabled false
+2026-02-01T15:25:17.4317139Z + IFS=
+2026-02-01T15:25:17.4318213Z + read -r loc
+2026-02-01T15:25:17.4318419Z + [[ -z eastusstg ]]
+2026-02-01T15:25:17.4318471Z + [[ 0 == \1 ]]
+2026-02-01T15:25:17.4318517Z + az network watcher configure --locations eastusstg --enabled false
+2026-02-01T15:25:19.2615333Z + IFS=
+2026-02-01T15:25:19.2616186Z + read -r loc
+2026-02-01T15:25:19.2616246Z + [[ -z southcentralus ]]
+2026-02-01T15:25:19.2616347Z + [[ 0 == \1 ]]
+2026-02-01T15:25:19.2616429Z + az network watcher configure --locations southcentralus --enabled false
+2026-02-01T15:25:21.2211444Z + IFS=
+2026-02-01T15:25:21.2212486Z + read -r loc
+2026-02-01T15:25:21.2213020Z + [[ -z westus3 ]]
+2026-02-01T15:25:21.2213150Z + [[ 0 == \1 ]]
+2026-02-01T15:25:21.2213239Z + az network watcher configure --locations westus3 --enabled false
+2026-02-01T15:25:23.0687821Z + IFS=
+2026-02-01T15:25:23.0689375Z + read -r loc
+2026-02-01T15:25:23.0689652Z + [[ -z northcentralus ]]
+2026-02-01T15:25:23.0689705Z + [[ 0 == \1 ]]
+2026-02-01T15:25:23.0689776Z + az network watcher configure --locations northcentralus --enabled false
+2026-02-01T15:25:24.9999121Z + IFS=
+2026-02-01T15:25:24.9999899Z + read -r loc
+2026-02-01T15:25:25.0000015Z + [[ -z westus ]]
+2026-02-01T15:25:25.0000093Z + [[ 0 == \1 ]]
+2026-02-01T15:25:25.0000407Z + az network watcher configure --locations westus --enabled false
+2026-02-01T15:25:27.4968365Z + IFS=
+2026-02-01T15:25:27.4969651Z + read -r loc
+2026-02-01T15:25:27.4970410Z + [[ -z jioindiawest ]]
+2026-02-01T15:25:27.4970496Z + [[ 0 == \1 ]]
+2026-02-01T15:25:27.4970578Z + az network watcher configure --locations jioindiawest --enabled false
+2026-02-01T15:25:29.7247245Z + IFS=
+2026-02-01T15:25:29.7248528Z + read -r loc
+2026-02-01T15:25:29.7248723Z + [[ -z centraluseuap ]]
+2026-02-01T15:25:29.7248968Z + [[ 0 == \1 ]]
+2026-02-01T15:25:29.7249063Z + az network watcher configure --locations centraluseuap --enabled false
+2026-02-01T15:25:31.8118763Z + IFS=
+2026-02-01T15:25:31.8119636Z + read -r loc
+2026-02-01T15:25:31.8119945Z + [[ -z southcentralusstg ]]
+2026-02-01T15:25:31.8120032Z + [[ 0 == \1 ]]
+2026-02-01T15:25:31.8120122Z + az network watcher configure --locations southcentralusstg --enabled false
+2026-02-01T15:25:34.0072247Z + IFS=
+2026-02-01T15:25:34.0073210Z + read -r loc
+2026-02-01T15:25:34.0073711Z + [[ -z westcentralus ]]
+2026-02-01T15:25:34.0073869Z + [[ 0 == \1 ]]
+2026-02-01T15:25:34.0073959Z + az network watcher configure --locations westcentralus --enabled false
+2026-02-01T15:25:36.0337311Z + IFS=
+2026-02-01T15:25:36.0338802Z + read -r loc
+2026-02-01T15:25:36.0339092Z + [[ -z southafricawest ]]
+2026-02-01T15:25:36.0339155Z + [[ 0 == \1 ]]
+2026-02-01T15:25:36.0341352Z + az network watcher configure --locations southafricawest --enabled false
+2026-02-01T15:25:38.0618838Z + IFS=
+2026-02-01T15:25:38.0619841Z + read -r loc
+2026-02-01T15:25:38.0620004Z + [[ -z australiacentral ]]
+2026-02-01T15:25:38.0620069Z + [[ 0 == \1 ]]
+2026-02-01T15:25:38.0620135Z + az network watcher configure --locations australiacentral --enabled false
+2026-02-01T15:25:39.7005484Z + IFS=
+2026-02-01T15:25:39.7006933Z + read -r loc
+2026-02-01T15:25:39.7007211Z + [[ -z australiacentral2 ]]
+2026-02-01T15:25:39.7007261Z + [[ 0 == \1 ]]
+2026-02-01T15:25:39.7007318Z + az network watcher configure --locations australiacentral2 --enabled false
+2026-02-01T15:25:41.2551973Z + IFS=
+2026-02-01T15:25:41.2552837Z + read -r loc
+2026-02-01T15:25:41.2553001Z + [[ -z australiasoutheast ]]
+2026-02-01T15:25:41.2553101Z + [[ 0 == \1 ]]
+2026-02-01T15:25:41.2553232Z + az network watcher configure --locations australiasoutheast --enabled false
+2026-02-01T15:25:43.0962697Z + IFS=
+2026-02-01T15:25:43.0963293Z + read -r loc
+2026-02-01T15:25:43.0963355Z + [[ -z jioindiacentral ]]
+2026-02-01T15:25:43.0963403Z + [[ 0 == \1 ]]
+2026-02-01T15:25:43.0963508Z + az network watcher configure --locations jioindiacentral --enabled false
+2026-02-01T15:25:44.9602771Z + IFS=
+2026-02-01T15:25:44.9603536Z + read -r loc
+2026-02-01T15:25:44.9603816Z + [[ -z koreasouth ]]
+2026-02-01T15:25:44.9603905Z + [[ 0 == \1 ]]
+2026-02-01T15:25:44.9604044Z + az network watcher configure --locations koreasouth --enabled false
+2026-02-01T15:25:46.8242643Z + IFS=
+2026-02-01T15:25:46.8243552Z + read -r loc
+2026-02-01T15:25:46.8243777Z + [[ -z southindia ]]
+2026-02-01T15:25:46.8243865Z + [[ 0 == \1 ]]
+2026-02-01T15:25:46.8244058Z + az network watcher configure --locations southindia --enabled false
+2026-02-01T15:25:49.2170774Z + IFS=
+2026-02-01T15:25:49.2172101Z + read -r loc
+2026-02-01T15:25:49.2173009Z + [[ -z westindia ]]
+2026-02-01T15:25:49.2173271Z + [[ 0 == \1 ]]
+2026-02-01T15:25:49.2173490Z + az network watcher configure --locations westindia --enabled false
+2026-02-01T15:25:51.3856583Z + IFS=
+2026-02-01T15:25:51.3858183Z + read -r loc
+2026-02-01T15:25:51.3858359Z + [[ -z canadaeast ]]
+2026-02-01T15:25:51.3858451Z + [[ 0 == \1 ]]
+2026-02-01T15:25:51.3858540Z + az network watcher configure --locations canadaeast --enabled false
+2026-02-01T15:25:53.0547593Z + IFS=
+2026-02-01T15:25:53.0548710Z + read -r loc
+2026-02-01T15:25:53.0548924Z + [[ -z francesouth ]]
+2026-02-01T15:25:53.0549107Z + [[ 0 == \1 ]]
+2026-02-01T15:25:53.0549210Z + az network watcher configure --locations francesouth --enabled false
+2026-02-01T15:25:55.0348131Z + IFS=
+2026-02-01T15:25:55.0348650Z + read -r loc
+2026-02-01T15:25:55.0348722Z + [[ -z germanynorth ]]
+2026-02-01T15:25:55.0348768Z + [[ 0 == \1 ]]
+2026-02-01T15:25:55.0348829Z + az network watcher configure --locations germanynorth --enabled false
+2026-02-01T15:25:56.6066085Z + IFS=
+2026-02-01T15:25:56.6066624Z + read -r loc
+2026-02-01T15:25:56.6066762Z + [[ -z norwaywest ]]
+2026-02-01T15:25:56.6066854Z + [[ 0 == \1 ]]
+2026-02-01T15:25:56.6066924Z + az network watcher configure --locations norwaywest --enabled false
+2026-02-01T15:25:58.6141077Z + IFS=
+2026-02-01T15:25:58.6142371Z + read -r loc
+2026-02-01T15:25:58.6142644Z + [[ -z switzerlandwest ]]
+2026-02-01T15:25:58.6142786Z + [[ 0 == \1 ]]
+2026-02-01T15:25:58.6143477Z + az network watcher configure --locations switzerlandwest --enabled false
+2026-02-01T15:26:00.5355499Z + IFS=
+2026-02-01T15:26:00.5356605Z + read -r loc
+2026-02-01T15:26:00.5356760Z + [[ -z uaecentral ]]
+2026-02-01T15:26:00.5356858Z + [[ 0 == \1 ]]
+2026-02-01T15:26:00.5357045Z + az network watcher configure --locations uaecentral --enabled false
+2026-02-01T15:26:02.5635516Z + IFS=
+2026-02-01T15:26:02.5636135Z + read -r loc
+2026-02-01T15:26:02.5636196Z + [[ -z brazilsoutheast ]]
+2026-02-01T15:26:02.5636240Z + [[ 0 == \1 ]]
+2026-02-01T15:26:02.5636353Z + az network watcher configure --locations brazilsoutheast --enabled false
+2026-02-01T15:26:04.2796601Z + IFS=
+2026-02-01T15:26:04.2797123Z + read -r loc
+2026-02-01T15:26:04.2797195Z + [[ -z ukwest ]]
+2026-02-01T15:26:04.2797445Z + [[ 0 == \1 ]]
+2026-02-01T15:26:04.2797526Z + az network watcher configure --locations ukwest --enabled false
+2026-02-01T15:26:05.9801695Z + IFS=
+2026-02-01T15:26:05.9802969Z + read -r loc
+2026-02-01T15:26:05.9807687Z ++ az group list --query '[].name' -o tsv
+2026-02-01T15:26:05.9808118Z ++ sort
+2026-02-01T15:26:07.0658271Z + rgs='NetworkWatcherRG
+2026-02-01T15:26:07.0659333Z rg-mcce-poc'
+2026-02-01T15:26:07.0659622Z + [[ -z NetworkWatcherRG
+2026-02-01T15:26:07.0659751Z rg-mcce-poc ]]
+2026-02-01T15:26:07.0659842Z + [[ -n '' ]]
+2026-02-01T15:26:07.0659924Z + to_delete='NetworkWatcherRG
+2026-02-01T15:26:07.0660002Z rg-mcce-poc'
+2026-02-01T15:26:07.0660194Z + [[ -z NetworkWatcherRG
+2026-02-01T15:26:07.0660869Z rg-mcce-poc ]]
+2026-02-01T15:26:07.0661065Z + echo '==> RGs to delete:'
+2026-02-01T15:26:07.0661121Z ==> RGs to delete:
+2026-02-01T15:26:07.0664629Z + echo 'NetworkWatcherRG
+2026-02-01T15:26:07.0664881Z + sed 's/^/  - /'
+2026-02-01T15:26:07.0664975Z rg-mcce-poc'
+2026-02-01T15:26:07.0674370Z   - NetworkWatcherRG
+2026-02-01T15:26:07.0675353Z   - rg-mcce-poc
+2026-02-01T15:26:07.0678534Z + IFS=
+2026-02-01T15:26:07.0679103Z + read -r rg
+2026-02-01T15:26:07.0679623Z + [[ -z NetworkWatcherRG ]]
+2026-02-01T15:26:07.0679772Z + echo
+2026-02-01T15:26:07.0679857Z 
+2026-02-01T15:26:07.0679948Z + echo '==> Processing RG: NetworkWatcherRG'
+2026-02-01T15:26:07.0680043Z ==> Processing RG: NetworkWatcherRG
+2026-02-01T15:26:07.0680543Z + echo '  removing locks in RG (best-effort)...'
+2026-02-01T15:26:07.0680689Z   removing locks in RG (best-effort)...
+2026-02-01T15:26:07.0680788Z + delete_scope_locks NetworkWatcherRG
+2026-02-01T15:26:07.0680878Z + local rg=NetworkWatcherRG
+2026-02-01T15:26:07.0680953Z + local lock_ids
+2026-02-01T15:26:07.0681027Z + [[ -n NetworkWatcherRG ]]
+2026-02-01T15:26:07.0686696Z ++ az lock list --resource-group NetworkWatcherRG --query '[].id' -o tsv
+2026-02-01T15:26:08.2848046Z + lock_ids=
+2026-02-01T15:26:08.2849044Z + [[ -z '' ]]
+2026-02-01T15:26:08.2849471Z + return 0
+2026-02-01T15:26:08.2849626Z + [[ 0 == \1 ]]
+2026-02-01T15:26:08.2849714Z + echo '  deleting RG (async): NetworkWatcherRG'
+2026-02-01T15:26:08.2850742Z   deleting RG (async): NetworkWatcherRG
+2026-02-01T15:26:08.2851038Z + az group delete -n NetworkWatcherRG --yes --no-wait
+2026-02-01T15:26:10.3107935Z + IFS=
+2026-02-01T15:26:10.3109161Z + read -r rg
+2026-02-01T15:26:10.3109440Z + [[ -z rg-mcce-poc ]]
+2026-02-01T15:26:10.3109548Z + echo
+2026-02-01T15:26:10.3109665Z 
+2026-02-01T15:26:10.3109749Z + echo '==> Processing RG: rg-mcce-poc'
+2026-02-01T15:26:10.3109852Z ==> Processing RG: rg-mcce-poc
+2026-02-01T15:26:10.3111079Z + echo '  removing locks in RG (best-effort)...'
+2026-02-01T15:26:10.3111483Z   removing locks in RG (best-effort)...
+2026-02-01T15:26:10.3111632Z + delete_scope_locks rg-mcce-poc
+2026-02-01T15:26:10.3111956Z + local rg=rg-mcce-poc
+2026-02-01T15:26:10.3112032Z + local lock_ids
+2026-02-01T15:26:10.3112095Z + [[ -n rg-mcce-poc ]]
+2026-02-01T15:26:10.3118449Z ++ az lock list --resource-group rg-mcce-poc --query '[].id' -o tsv
+2026-02-01T15:26:11.6416944Z + lock_ids=
+2026-02-01T15:26:11.6418454Z + [[ -z '' ]]
+2026-02-01T15:26:11.6418793Z + return 0
+2026-02-01T15:26:11.6419191Z + [[ 0 == \1 ]]
+2026-02-01T15:26:11.6421030Z + echo '  deleting RG (async): rg-mcce-poc'
+2026-02-01T15:26:11.6421298Z   deleting RG (async): rg-mcce-poc
+2026-02-01T15:26:11.6423587Z + az group delete -n rg-mcce-poc --yes --no-wait
+2026-02-01T15:26:13.0284930Z + IFS=
+2026-02-01T15:26:13.0287064Z + read -r rg
+2026-02-01T15:26:13.0288470Z + IFS=
+2026-02-01T15:26:13.0290461Z + read -r sub
+2026-02-01T15:26:13.0291923Z + echo
+2026-02-01T15:26:13.0292460Z 
+2026-02-01T15:26:13.0294325Z + [[ 0 == \1 ]]
+2026-02-01T15:26:13.0294645Z + echo '✅ Delete requests submitted (async). Check status with:'
+2026-02-01T15:26:13.0296149Z ✅ Delete requests submitted (async). Check status with:
+2026-02-01T15:26:13.0296456Z + echo '   az group list -o table'
+2026-02-01T15:26:13.0296603Z    az group list -o table
+2026-02-01T15:26:13.0296698Z + echo '   az group exists -n <rgname>'
+2026-02-01T15:26:13.0296800Z    az group exists -n <rgname>
+2026-02-01T15:26:13.0313297Z evaluating expression 'always()'
+2026-02-01T15:26:13.0314688Z expression 'always()' evaluated to 'true'
+2026-02-01T15:26:13.0315012Z ⭐ Run Post Checkout
+2026-02-01T15:26:13.0316539Z run post step for 'Checkout'
+2026-02-01T15:26:13.0317258Z executing remote job container: [node /home/git/.cache/act/a1d7e7c616fa69e3/act/actions/actions-checkout@v4/dist/index.js]
+2026-02-01T15:26:13.4267072Z [command]/usr/bin/git version
+2026-02-01T15:26:13.4452490Z git version 2.43.0
+2026-02-01T15:26:13.4554426Z ***
+2026-02-01T15:26:13.4644883Z Temporarily overriding HOME='/home/git/.cache/act/a1d7e7c616fa69e3/tmp/eb1d2ce2-74fe-4c0a-a415-ed02d40d8375' before making global git config changes
+2026-02-01T15:26:13.4650007Z Adding repository directory to the temporary git global config as a safe directory
+2026-02-01T15:26:13.4669655Z [command]/usr/bin/git config --global --add safe.directory /home/git/.cache/act/a1d7e7c616fa69e3/hostexecutor
+2026-02-01T15:26:13.4783702Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-02-01T15:26:13.4859425Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-02-01T15:26:13.5263883Z [command]/usr/bin/git config --local --name-only --get-regexp http\.http\:\/\/172\.25\.183\.89\:3000\/\.extraheader
+2026-02-01T15:26:13.5320141Z http.http://172.25.183.89:3000/.extraheader
+2026-02-01T15:26:13.5349006Z [command]/usr/bin/git config --local --unset-all http.http://172.25.183.89:3000/.extraheader
+2026-02-01T15:26:13.5424435Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.http\:\/\/172\.25\.183\.89\:3000\/\.extraheader' && git config --local --unset-all 'http.http://172.25.183.89:3000/.extraheader' || :"
+2026-02-01T15:26:13.5906703Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-02-01T15:26:13.6007375Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-02-01T15:26:13.6703277Z   ✅  Success - Post Checkout
+2026-02-01T15:26:13.6709496Z Cleaning up container for job destroy
+2026-02-01T15:26:13.7330409Z 🏁  Job succeeded

@@ -1,0 +1,13 @@
+---
+- name: Deploy ModulA (HTML)
+  hosts: poc
+  become: true
+
+  tasks:
+    - name: Deploy HTML content
+      ansible.builtin.copy:
+        src: html/
+        dest: /var/www/html/
+        owner: www-data
+        group: www-data
+        mode: '0755'
